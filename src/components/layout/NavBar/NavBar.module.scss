@@ -1,10 +1,12 @@
-@import '../../../styles/settings.scss';
+@import "../../../styles/settings.scss";
 
- .root {
      .AppBar {
          background: $base-color;
-         min-height: 100px;
+         //min-height: 100px;
          justify-content: center;
+     }
+     .toolbar {
+         justify-content: space-between;
      }
      .login {
          text-decoration: none;
@@ -12,11 +14,8 @@
          font-family: $text-font;
      }
      .brand {
-         font-family: $logo-font;
-         width: 65%;
+         font-family: $header-font;
      }
      .menuButton {
-        margin-right: 1rem;
+         margin-right: 1rem;
      }
-
- }

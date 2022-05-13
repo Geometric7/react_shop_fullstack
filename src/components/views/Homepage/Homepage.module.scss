@@ -1,1 +1,45 @@
-@import '../../../styles/settings.scss';
+@import "../../../styles/settings.scss";
+
+.root {
+  margin-top: 64px;
+  .TextBox {
+    position: relative;
+    height: 530px;
+    border-radius: 20%;
+    .image {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        opacity: 0.2;
+        &:hover {
+            opacity: 0.4;
+            transition: all 1s ease-in-out;
+        }
+    }
+
+    .Maintext {
+      font-family: $logo-font;
+      font-weight: bolder;
+      font-size: 44px;
+      color: $text-color-dark;
+      text-align: center;
+      opacity: 1;
+      .flare {
+        font-size: 35px;
+        text-align: center;
+        color: coral;
+      }
+    }
+    .Subtext {
+      font-family: $logo-font;
+      font-weight: normal;
+      font-size: 35px;
+      color: $text-color-dark;
+      text-align: center;
+    }
+    .Ring {
+      font-size: 45px;
+      text-align: center;
+    }
+}
+}

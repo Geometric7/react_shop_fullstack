@@ -1,9 +1,76 @@
 export const initialState = {
-  posts: {
-    data: {},
+  rings: {
+    data: [
+      {
+        _id: '1',
+        name: 'magic ring',
+        image: 'https://cdn.pixabay.com/photo/2017/08/13/09/25/glass-and-wood-ring-2636613_960_720.jpg',
+        description: '',
+        price: 50,
+        rate: 4,
+        cathegory: 'Earth',
+        options: [
+          { option1: '' },
+          { option2: '' },
+          { option3: '' },
+          { option4: '' },
+        ],
+      },
+      {
+        _id: '2',
+        name: 'magic ring',
+        image: 'https://cdn.pixabay.com/photo/2017/08/13/09/23/glass-and-wood-ring-2636608_960_720.jpg',
+        description: '',
+        price: 250,
+        rate: 3,
+        cathegory: 'Fire',
+        options: [
+          { option1: '' },
+          { option2: '' },
+          { option3: '' },
+          { option4: '' },
+        ],
+      },
+      {
+        _id: '3',
+        name: 'magic ring',
+        image: 'https://cdn.pixabay.com/photo/2017/08/13/09/13/glass-and-wood-ring-2636592_960_720.jpg',
+        description: '',
+        price: 50,
+        rate: 5,
+        cathegory: 'Water',
+        options: [
+          { option1: '' },
+          { option2: '' },
+          { option3: '' },
+          { option4: '' },
+        ],
+      },
+      {
+        _id: '4',
+        name: 'magic ring',
+        image: 'https://cdn.thisiswhyimbroke.com/images/handmade-wooden-rings-640x534.jpg',
+        description: '',
+        price: 55,
+        rate: 2,
+        cathegory: '',
+        options: [
+          { option1: '' },
+          { option2: '' },
+          { option3: '' },
+          { option4: '' },
+        ],
+      },
+    ],
     loading: {
       active: false,
       error: false,
     },
   },
+  cathegories: [
+    { id: 'fire', name: 'Fire' },
+    { id: 'water', name: 'Water' },
+    { id: 'earth', name: 'Earth' },
+    { id: 'air', name: 'Air' },
+  ],
 };
