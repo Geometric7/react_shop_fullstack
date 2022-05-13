@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import { createTheme, StylesProvider, ThemeProvider } from '@material-ui/core/styles';
+import { CssBaseline } from '@material-ui/core';
 
-export default App;
+import { store } from './redux/store';
+
+import { MainLayout } from './components/layout/MainLayout/MainLayout';
+import { Homepage } from './components/views/Homepage/Homepage';
+import { Post } from './components/views/Post/Post';
+import { NotFound } from './components/views/NotFound/NotFound';
+
+const theme = createTheme({
+  palette: {
+    primary: { main: '#4D43DA' },
+  },
+});
+
+const App = () => (
+  <Provider store={store}>
+    <BrowserRouter>
+      <StylesProvider injectFirst>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <MainLayout>
+            <Routes>
+              <Route exact path='/' component={Homepage} />
+              <Route exact path='/post/:id' component={Post} />
+              <Route path='*' component={NotFound} />
+            </Routes>
+          </MainLayout>
+        </ThemeProvider>
+      </StylesProvider>
+    </BrowserRouter>
+  </Provider>
+);
+
+export { App };

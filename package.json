@@ -3,19 +3,54 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.1",
+    "@types/node": "^17.0.33",
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.4",
+    "axios": "^0.27.2",
+    "clsx": "^1.1.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "node-sass": "^7.0.1",
+    "npm-run-all": "^4.1.5",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-redux": "^8.0.1",
+    "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
+    "react-test-renderer": "^18.1.0",
+    "redux": "^4.2.0",
+    "redux-thunk": "^2.4.1",
+    "sass": "^1.51.0",
+    "typescript": "^4.6.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "run-p start:* ",
+    "start-silent": "run-p start > /dev/null",
+    "start:react": "react-scripts start",
+    "start-and-test": "run-p start-silent test ",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --noStackTrace",
+    "test-all": "react-scripts test --watchAll=false --noStackTrace",
+    "test-related": "react-scripts test --watchAll=false --noStackTrace --findRelatedTests",
     "eject": "react-scripts eject"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "yarn test-related --",
+      "eslint --fix"
+    ]
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +69,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "husky": "4.2",
+    "lint-staged": "^12.4.1",
+    "redux-devtools-extension": "^2.13.9"
   }
 }
