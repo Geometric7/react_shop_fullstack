@@ -1,0 +1,22 @@
+@import '../../../styles/settings.scss';
+
+ .root {
+     .AppBar {
+         background: $base-color;
+         min-height: 100px;
+         justify-content: center;
+     }
+     .login {
+         text-decoration: none;
+         color: $text-color-light;
+         font-family: $text-font;
+     }
+     .brand {
+         font-family: $logo-font;
+         width: 65%;
+     }
+     .menuButton {
+        margin-right: 1rem;
+     }
+
+ }
