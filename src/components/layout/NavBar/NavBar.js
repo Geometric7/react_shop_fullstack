@@ -19,7 +19,7 @@ const Component = () => (
               Our creations
         </Link>
       </Button>
-      <Typography align='center' variant='h4' className={styles.brand}>Enchanted<span className={styles.link}>Rings</span></Typography>
+      <Typography align='center' variant='h4' className={styles.brand}>Enchanted<span className={styles.link}> Rings</span></Typography>
       <Button className={styles.shop} color="inherit" startIcon= {<ShoppingCart />}>
         <Link
           to="/client"
