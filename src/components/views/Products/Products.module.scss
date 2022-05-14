@@ -1,0 +1,84 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  margin-top: 100px;
+  h2 {
+    font-family: $logo-font;
+    font-size: 36px;
+  }
+
+  .divider {
+    margin: 2rem;
+    background-color: $base-color;
+    border-radius: 50%;
+    height: 3px;
+  }
+
+  h3 {
+    font-family: $logo-font;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 2rem;
+    opacity: 0.8;
+  }
+
+  .Card {
+    display: flex;
+    border-radius: 4px;
+    margin: 30px 0;
+    transition: 1s all;
+    align-content: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 70vw;
+    height: 50vh;
+    &:hover {
+      transform: translate(-10px, 10px);
+    }
+
+    .Content {
+        width: 35%;
+        text-align: center;
+    }
+
+    h3 {
+      font-size: 1.8rem;
+      text-decoration: none;
+      font-family: $header-font;
+    }
+
+    .BoardImg {
+      display: flex;
+      overflow: hidden;
+      object-fit: cover;
+      width: 65%;
+    }
+
+    .button{
+        opacity: 0;
+        transition: 1s all;
+    }
+
+    p {
+      font-size: 1.1rem;
+      opacity: 0.6;
+      margin: 5px 0;
+      text-decoration: none;
+      font-family: $text-font;
+    }
+    .description {
+        text-overflow: ellipsis;
+        overflow: auto;
+        max-height: 48%;
+    }
+    &:hover .button {
+        opacity: 1;
+    }
+  }
+
+  a,
+  a:hover {
+    font-weight: 600;
+    text-decoration: none;
+  }
+}

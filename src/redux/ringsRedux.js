@@ -1,8 +1,19 @@
 /* selectors */
-export const getAll = ({posts}) => posts.data;
+export const getAll = ({rings}) => rings.data;
+
+export const getRingsByCategory = ({ rings }, id ) => {
+  const categoryRings = rings.data.filter(ring => ring.category === id);
+  console.log(categoryRings);
+  return categoryRings;
+};
+
+export const getRingByOption = ({rings}, id) => {
+  const ring = rings.data.filter(ring => ring.option === id);
+  return ring.length ? ring[0] : { error: true };
+};
 
 /* action name creator */
-const reducerName = 'posts';
+const reducerName = 'rings';
 const createActionName = name => `app/${reducerName}/${name}`;
 
 /* action types */

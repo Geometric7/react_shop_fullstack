@@ -13,18 +13,34 @@ import ShoppingCart from '@material-ui/icons/ShoppingCart';
 const Component = () => (
   <AppBar className={styles.AppBar}>
     <Toolbar className={styles.toolbar}>
-      <Button edge="start" startIcon= {<Flare />} className={styles.menuButton} color="inherit" aria-label="menu">
-        <Link to = '/my-posts'
-          className={styles.login}>
-              Our creations
+      <Button
+        edge="start"
+        startIcon={<Flare />}
+        className={styles.menuButton}
+        color="inherit"
+        aria-label="menu"
+      >
+        <Link to="/my-posts" className={styles.login}>
+        Our creations
         </Link>
       </Button>
-      <Typography align='center' variant='h4' className={styles.brand}>Enchanted<span className={styles.link}> Rings</span></Typography>
-      <Button className={styles.shop} color="inherit" startIcon= {<ShoppingCart />}>
-        <Link
-          to="/client"
-          className={styles.login}
-        >Your Cart</Link>
+      <Link to="/" className={styles.login}>
+        <Typography
+          align="center"
+          variant="h4"
+          className={styles.brand}>
+          Enchanted
+          <span className={styles.linka}> Rings</span>
+        </Typography>
+      </Link>
+      <Button
+        className={styles.shop}
+        color="inherit"
+        startIcon={<ShoppingCart />}
+      >
+        <Link to="/client" className={styles.login}>
+          Your cart
+        </Link>
       </Button>
     </Toolbar>
   </AppBar>

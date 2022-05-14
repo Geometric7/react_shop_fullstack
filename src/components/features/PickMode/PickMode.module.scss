@@ -1,0 +1,19 @@
+@import '../../../styles/settings.scss';
+
+ .root {
+    .Carousel {
+        height: 65vh;
+
+    }
+    .thumbnails {
+        width: 100%;
+        height: 70px;
+
+        .thumbImg {
+            object-fit: cover;
+            overflow: hidden;
+            width: 70%;
+            height: 100%;
+        }
+    }
+ }

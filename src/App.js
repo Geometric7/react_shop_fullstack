@@ -9,8 +9,10 @@ import { store } from './redux/store';
 
 import { MainLayout } from './components/layout/MainLayout/MainLayout';
 import { Homepage } from './components/views/Homepage/Homepage';
-import { Post } from './components/views/Post/Post';
 import { NotFound } from './components/views/NotFound/NotFound';
+import { Ring } from './components/views/Ring/Ring';
+import { Products } from './components/views/Products/Products';
+
 
 const theme = createTheme({
   palette: {
@@ -27,7 +29,8 @@ const App = () => (
           <MainLayout>
             <Routes>
               <Route exact path='/' component={Homepage} />
-              <Route exact path='/post/:id' component={Post} />
+              <Route exact path='/products/:id' component={Products} />
+              <Route exact path='/ring/:id' component={ Ring } />
               <Route path='*' component={NotFound} />
             </Routes>
           </MainLayout>

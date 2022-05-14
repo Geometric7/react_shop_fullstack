@@ -1,20 +1,38 @@
 @import "../../../styles/settings.scss";
 
 .root {
-  margin-top: 64px;
+  margin-top: 84px;
+
+  .leftImage {
+    object-fit: cover;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    border-radius: 5%;
+    margin-right: 2px;
+  }
+
+  .divider {
+    margin: 3rem;
+    background-color: $base-color;
+    border-radius: 50%;
+    height: 2px;
+  }
+
   .TextBox {
     position: relative;
-    height: 530px;
+    height: 610px;
     border-radius: 20%;
     .image {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        opacity: 0.2;
-        &:hover {
-            opacity: 0.4;
-            transition: all 1s ease-in-out;
-        }
+      position: absolute;
+      border-radius: 5%;
+      height: 100%;
+      width: 100%;
+      opacity: 0.2;
+      &:hover {
+        opacity: 0.4;
+        transition: all 1s ease-in-out;
+      }
     }
 
     .Maintext {
@@ -22,11 +40,11 @@
       font-weight: bolder;
       font-size: 44px;
       color: $text-color-dark;
+      margin-top: 150px;
       text-align: center;
       opacity: 1;
       .flare {
         font-size: 35px;
-        text-align: center;
         color: coral;
       }
     }
@@ -41,5 +59,27 @@
       font-size: 45px;
       text-align: center;
     }
-}
+  }
+  .Box {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .imageButton {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .textButton {
+    position: absolute;
+    text-decoration: none;
+    color: $text-color-light;
+    font-family: $logo-font;
+    font-size: 55px;
+    margin-top: 150px;
+    margin-right: 1rem;
+  }
+  .link {
+    width: 45%;
+    margin: 1.5rem 0;
+  }
 }

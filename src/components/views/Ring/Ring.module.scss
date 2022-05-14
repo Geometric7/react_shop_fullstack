@@ -1,0 +1,42 @@
+@import '../../../styles/settings.scss';
+
+ .root {
+     margin-top: 100px;
+
+     p {
+         font-family: $text-font;
+         font-weight: 600;
+         color: $text-color-dark;
+         opacity: 0.8;
+         text-align: center;
+         margin: 2rem;
+     }
+     h1 {
+         font-family: $header-font;
+         color: $text-color-dark;
+         font-size: 3rem;
+         text-align: center;
+         margin: 2rem;
+     }
+     .select {
+        width: 90%;
+        margin: 2rem;
+        color: $text-color-dark;
+        font-family: $text-font;
+
+    }
+    .radio:hover {
+        background-color: inherit;
+        color: $text-color-light;
+    }
+    .button {
+        width: 60%;
+        background-color: $base-color;
+        height: 50px;
+        color: $text-color-light;
+        &:hover {
+            background-color: lighten($color: $base-color, $amount: 5%);
+        }
+    }
+
+ }
