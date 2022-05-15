@@ -1,8 +1,12 @@
+import axios from 'axios';
+export const API_URL = (process.env.NODE_ENV === 'production') ? '/api' : 'http://localhost:8000/api';
+
+
 /* selectors */
-export const getVariants = ({variants}) => variants;
+export const getVariants = ({variants}) => variants.data;
 
 export const getVariantsByProducts = ({ variants }, id ) => {
-  const variant = variants.filter(opt=> opt.id === id);
+  const variant = variants.data.filter(opt=> opt.id === id);
   return variant;
 };
 
@@ -20,6 +24,21 @@ export const fetchStarted = payload => ({ payload, type: FETCH_START });
 export const fetchSuccess = payload => ({ payload, type: FETCH_SUCCESS });
 export const fetchError = payload => ({ payload, type: FETCH_ERROR });
 /* thunk creators */
+export const loadVariantsRequest = () => {
+  return (dispatch, getState) => {
+    try {
+      const { variants } = getState();
+      if (!variants.data.length || variants.loading.active === false) {
+        dispatch(fetchStarted());
+        axios.get(`${API_URL}/variant`).then((res) => {
+          dispatch(fetchSuccess(res.data));
+        });
+      }
+    } catch (err) {
+      dispatch(fetchError(err.message || true));
+    }
+  };
+};
 /* reducer */
 export const reducer = (statePart = [], action = {}) => {
   switch (action.type) {

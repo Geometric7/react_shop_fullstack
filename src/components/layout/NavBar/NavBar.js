@@ -2,53 +2,47 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import styles from './NavBar.module.scss';
-//import clsx from 'clsx';
+import { Cart } from '../../features/Cart/Cart';
+import cartStorage from '../../../_HOcomponents/cartStorage/cartStorage';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Flare  from '@material-ui/icons/Flare';
-import ShoppingCart from '@material-ui/icons/ShoppingCart';
+//import ShoppingCart from '@material-ui/icons/ShoppingCart';
 
-const Component = () => (
-  <AppBar className={styles.AppBar}>
-    <Toolbar className={styles.toolbar}>
-      <Button
-        edge="start"
-        startIcon={<Flare />}
-        className={styles.menuButton}
-        color="inherit"
-        aria-label="menu"
-      >
-        <Link to="/my-posts" className={styles.login}>
-        Our creations
+const CartWithStorageManage = cartStorage(Cart);
+const Component = () => {
+  return (
+    <AppBar className={styles.AppBar}>
+      <Toolbar className={styles.toolbar}>
+        <Button
+          edge="start"
+          startIcon={<Flare />}
+          className={styles.menuButton}
+          color="inherit"
+          aria-label="menu"
+        >
+          <Link to="/" className={styles.login}>
+            Our Creations
+          </Link>
+        </Button>
+        <Link to="/" className={styles.login}>
+          <Typography align="center" variant="h4" className={styles.brand}>
+            Enchanted
+            <span className={styles.brans}> Rings</span>
+          </Typography>
         </Link>
-      </Button>
-      <Link to="/" className={styles.login}>
-        <Typography
-          align="center"
-          variant="h4"
-          className={styles.brand}>
-          Enchanted
-          <span className={styles.brand}> Rings</span>
-        </Typography>
-      </Link>
-      <Button
-        className={styles.shop}
-        color="inherit"
-        startIcon={<ShoppingCart />}
-      >
-        <Link to="/client" className={styles.login}>
-          Your cart
-        </Link>
-      </Button>
-    </Toolbar>
-  </AppBar>
-);
+        <CartWithStorageManage/>
+      </Toolbar>
+    </AppBar>
+  );
+};
 
 Component.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
+  mobile: PropTypes.bool,
 };
 
 export {

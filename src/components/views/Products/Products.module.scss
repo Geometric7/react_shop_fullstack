@@ -4,6 +4,7 @@
   margin-top: 100px;
   h2 {
     font-family: $logo-font;
+    text-decoration: none;
     font-size: 36px;
   }
 
@@ -37,8 +38,8 @@
     }
 
     .Content {
-        width: 35%;
-        text-align: center;
+      width: 35%;
+      text-align: center;
     }
 
     h3 {
@@ -81,4 +82,19 @@
     font-weight: 600;
     text-decoration: none;
   }
+  @media (max-width: 768px) {
+   .Card {
+     display: flex;
+     flex-direction: column;
+     margin: 10px 0;
+     justify-content: center;
+     width: 85vw;
+     .Content {
+       width: 100%;
+     }
+     .BoardImg {
+       width: 100%;
+     }
+   }
+ }
 }

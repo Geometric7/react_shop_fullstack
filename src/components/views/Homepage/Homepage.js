@@ -12,43 +12,64 @@ import Divider from '@material-ui/core/Divider';
 import Flare from '@material-ui/icons/Flare';
 
 import { connect } from 'react-redux';
-import { getCategories } from '../../../redux/categoriesRedux';
+import { getAll } from '../../../redux/ringsRedux';
+import { fetchPublished } from '../../../redux/ringsRedux';
 
-const Component = ({className, categories, children}) => (
-  <Container className={clsx(className, styles.root)}>
-    <Divider variant="middle" className={styles.divider} />
-    <Grid
-      container
-      direction="row"
-      justifyContent="space-evenly"
-      alignItems="center">
-      <Grid item xs={12} sm={6}>
-        <img className={styles.leftImage} src={ringImage1} alt="ring"/>
-      </Grid>
-      <Grid item xs={12} sm={6}
-        className={styles.TextBox}>
-        <img className={styles.image} src={ringImage2} alt="ring2"/>
-        <h2 className={styles.Maintext}>Test text 1 <Flare className={styles.flare}/></h2>
-        <h3 className={styles.Subtext}>test text 2 </h3>
-      </Grid>
-    </Grid>
-    <Divider variant="middle" className={styles.divider} />
-    <HeadButtons categories={categories}/>
-    <Divider variant="middle" className={styles.divider} />
-  </Container>
-);
+class Component extends React.Component {
+  static propTypes = {
+    children: PropTypes.node,
+    className: PropTypes.string,
+    rings: PropTypes.array,
+    loadProduct: PropTypes.func,
+  };
 
-Component.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.string,
-  categories: PropTypes.array,
-};
+  componentDidMount() {
+    this.props.loadProduct();
+  }
+  render() {
+    const { className, rings } = this.props;
+    return (
+      <Container className={clsx(className, styles.root)}>
+        <Divider variant="middle" className={styles.divider} />
+        <Grid
+          container
+          direction="row"
+          justifyContent="space-evenly"
+          alignItems="center"
+        >
+          <Grid item xs={12} sm={6}>
+            <img className={styles.leftImage} src={ringImage1} alt="ring1" />
+          </Grid>
+          <Grid item xs={12} sm={6} className={styles.TextBox}>
+            <img className={styles.image} src={ringImage2} alt="ring2" />
+            <h2 className={styles.Maintext}>
+              Test rings text
+              <Flare className={styles.flare} />
+            </h2>
+            <h3 className={styles.Subtext}>Test ring text2 </h3>
+          </Grid>
+        </Grid>
 
-const mapStateToProps = state => ({
-  categories: getCategories(state),
+        <Divider variant="middle" className={styles.divider} />
+        <HeadButtons rings={rings} />
+        <Divider variant="middle" className={styles.divider} />
+      </Container>
+    );
+  }
+}
+
+const mapStateToProps = (state) => ({
+  rings: getAll(state),
 });
 
-const ContainerComponent = connect(mapStateToProps)(Component);
+const mapDispatchToProps = (dispatch) => ({
+  loadProduct: () => dispatch(fetchPublished()),
+});
+
+const ContainerComponent = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Component);
 
 export {
   ContainerComponent as Homepage,

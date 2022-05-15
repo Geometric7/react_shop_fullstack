@@ -1,0 +1,44 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  .Box {
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+
+    .input {
+      border: 1px solid $text-color-dark;
+      background-color: $text-color-light;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 5px;
+      outline: none;
+      font-size: 1rem;
+
+      &:active,
+      &:focus {
+        border-color: $base-color;
+        background-color: lighten($base-color, 65%);
+      }
+    }
+
+    label {
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      opacity: 0.5;
+    }
+  }
+  .button {
+    letter-spacing: 0.1rem;
+    margin-top: 1rem;
+    float: right;
+    width: 50%;
+    background-color: $base-color;
+    height: 50px;
+    color: $text-color-light;
+    letter-spacing: 0.1rem;
+    &:hover {
+        background-color: lighten($color: $base-color, $amount: 5%);
+    }
+  }
+}

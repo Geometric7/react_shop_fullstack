@@ -1,4 +1,25 @@
 export const initialState = {
+
+  variants: {
+    data: [],
+    loading: {
+      active: false,
+      error: false,
+    },
+  },
+  rings: {
+    data: [],
+    loading: {
+      active: false,
+      error: false,
+    },
+  },
+  cart: {
+    rings: [],
+  },
+};
+
+/*export const initialState = {
   categories: [
     { id: 'fire', name: 'Filled with fire', image: 'https://images.gemexi.com/blog-pictures/need-enthusiasm-in-life-access-the-power-of-the-fire-element-learn-how-picture.jpg'},
     { id: 'water', name: 'Filled with water', image: 'https://i0.wp.com/astroligion.com/wp-content/uploads/2019/02/water-element.png?resize=940%2C620&ssl=1'},
@@ -155,3 +176,4 @@ export const initialState = {
     rings: [],
   },
 };
+*/

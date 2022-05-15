@@ -1,0 +1,56 @@
+@import "../../../styles/settings.scss";
+
+.wrapper {
+  margin-top: 100px;
+  margin: 20px auto;
+  max-width: 850px;
+}
+
+.link {
+  color: $text-color-dark;
+  opacity: 0.6;
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  margin: 30px 0;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+h2 {
+  margin-top: 20px;
+  font-family: $header-font;
+  letter-spacing: 0.1rem;
+  text-decoration: underline;
+}
+
+.header {
+  margin-top: 100px;
+}
+
+.items {
+  margin: 30px 0;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+
+  span {
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+  }
+}
+@media (max-width: 768px) {
+  .wrapper {
+    margin: 0 10px;
+    max-width: 600px;
+  }
+}
+@media (max-width: 365px) {
+  .wrapper {
+    margin: 0 10px;
+    max-width: 400px;
+  }
+}

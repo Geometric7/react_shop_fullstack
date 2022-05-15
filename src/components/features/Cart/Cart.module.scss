@@ -1,0 +1,107 @@
+@import "../../../styles/settings.scss";
+
+.cartlink {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  span {
+    color: $text-color-light;
+    font-weight: 100;
+    padding-right: 15px;
+  }
+  button {
+    margin: 0;
+  }
+}
+
+.root {
+  position: fixed;
+  height: calc(100vh - 60px);
+  top: 60px;
+  width: 100vw;
+  left: 0;
+  display: none;
+}
+
+.background {
+  background-color: transparentize($color: $base-color, $amount: 0.3);
+  height: 100%;
+  width: calc(100% - 450px);
+}
+
+.expanded {
+  transition: 1s all ease-in-out;
+  margin-right: 0;
+  display: flex;
+  animation: viewsFromRight 0.5 ease;
+}
+
+.cart {
+  height: 100%;
+  width: 450px;
+  transition: transform 0.5s ease;
+  background-color: $text-color-light;
+  padding: 40px 20px;
+  box-shadow: 0px 2px 4px 0px $base-color;
+  overflow: auto;
+}
+
+.items {
+  height: 60%;
+  overflow: auto;
+}
+.noProducts {
+    color: $text-color-dark;
+}
+.summary {
+  p {
+    color: $text-color-dark;
+    font: 700 1.1rem $text-font;
+    letter-spacing: 0.3rem;
+    border-bottom: 1px solid $base-color;
+  }
+
+  & > div {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      padding: 3px 0;
+      font-size: 0.9rem;
+      color: $text-color-dark;
+      letter-spacing: 0.1rem;
+    }
+  }
+}
+
+.linkContinue {
+  float: right;
+  margin-top: 40px;
+  .button {
+    width: 60%;
+    background-color: $base-color;
+    height: 50px;
+    color: $text-color-light;
+    letter-spacing: 0.1rem;
+    &:hover {
+        background-color: lighten($color: $base-color, $amount: 5%);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .cartlink {
+    span {
+      padding-right: 15px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .cart {
+    width: 100vw;
+  }
+}

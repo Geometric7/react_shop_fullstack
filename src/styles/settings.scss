@@ -6,7 +6,27 @@ $base-color: #6A67CE;
 $background-color: #EEF3D2;
 $text-color-dark: #0B0909;
 $text-color-light: #F7EFEF;
+$color-success: #36AE7C;
+$color-danger: #EB5353;
+
+@keyframes viewsFromRight {
+    0% {
+      margin-left: 150px;
+    }
+    100% {
+      margin-left: 0;
+    }
+  }
 
 $logo-font: 'Princess Sofia', cursive;
 $text-font: 'Sora', sans-serif;
 $header-font: 'Princess Sofia', cursive;
+
+@keyframes viewsFromRight {
+    0% {
+      margin-left: 150px;
+    }
+    100% {
+      margin-left: 0;
+    }
+  }

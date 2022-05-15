@@ -4,8 +4,7 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
 import { connect } from 'react-redux';
-import { getRingsByCategory } from '../../../redux/ringsRedux.js';
-import { getHeaderById } from '../../../redux/categoriesRedux';
+import { getRingsByCategory, fetchPublished } from '../../../redux/ringsRedux.js';
 import styles from './Products.module.scss';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -16,50 +15,68 @@ import Container from '@material-ui/core/Container';
 import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
 
-const Component = ({ className, children, categoryRings, category }) => (
-  <Container className={clsx(className, styles.root)}>
-    <h2>{category[0].name}!</h2>
-    <Divider variant="middle" className={styles.divider} />
-    {categoryRings.map((ring) => (
-      <div key={ring.variant}>
-        <h3>{ring.name}</h3>
-        <NavLink key={ring.variant} exact to={`/ring./${ring.variant}`}>
-          <Card className={styles.Card}>
-            <CardMedia
-              className={styles.BoardImg}
-              component="img"
-              image={ring.image}
-              variant={ring.variant}
-            />
-            <CardContent className={styles.Content}>
-              <Typography component="h3">{ring.variant}</Typography>
-              <Typography component="p" className={styles.description}>
-                {ring.description}
-              </Typography>
-              <Button className={styles.button} variant="outlined" color="primary">See more</Button>
-              <Typography component="p">Price from: {ring.price}$</Typography>
-            </CardContent>
-          </Card>
-        </NavLink>
-        <Divider variant="middle" className={styles.divider} />
-      </div>
-    ))}
-  </Container>
-);
+class Component extends React.Component {
+  static propTypes = {
+    className: PropTypes.string,
+    categoryRings: PropTypes.array,
+    category: PropTypes.array,
+    match: PropTypes.shape({
+      params: PropTypes.shape({
+        id: PropTypes.string,
+      }),
+    }),
+    getCategory: PropTypes.func,
+    loadProduct:PropTypes.func,
+  };
 
-Component.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.string,
-  categoryRings: PropTypes.array,
-  category: PropTypes.array,
-};
+  componentDidMount() {
+    this.props.loadProduct();
+  }
+
+
+  render() {
+    const { className, categoryRings } = this.props;
+    return  (
+      <Container className={clsx(className, styles.root)}>
+        <h2>{categoryRings[0].categoryName}</h2>
+        <Divider variant="middle" className={styles.divider} />
+        {categoryRings.map((ring) => (
+          <div key={ring.variant}>
+            <h3>{ring.name}</h3>
+            <NavLink key={ring.variant} exact to={`/ring/${ring.variant}`}>
+              <Card className={styles.Card}>
+                <CardMedia
+                  className={styles.BoardImg}
+                  component="img"
+                  image={ring.image}
+                  option={ring.option}
+                />
+                <CardContent className={styles.Content}>
+                  <Typography component="h3">{ring.option}</Typography>
+                  <Typography component="p" className={styles.description}>
+                    {ring.description}
+                  </Typography>
+                  <Button className={styles.button} variant="outlined" color="primary">See more</Button>
+                  <Typography component="p">Price from: {ring.price}$</Typography>
+                </CardContent>
+              </Card>
+            </NavLink>
+            <Divider variant="middle" className={styles.divider} />
+          </div>
+        ))}
+      </Container>
+    );
+  }
+}
 
 const mapStateToProps = (state, props) => ({
-  category: getHeaderById(state, props.match.params.id),
   categoryRings: getRingsByCategory(state, props.match.params.id),
 });
+const mapDispatchToProps = dispatch => ({
+  loadProduct: () => dispatch(fetchPublished()),
+});
 
-const ContainerComponent = connect(mapStateToProps)(Component);
+const ContainerComponent = connect(mapStateToProps, mapDispatchToProps)(Component);
 
 export {
   ContainerComponent as Products,

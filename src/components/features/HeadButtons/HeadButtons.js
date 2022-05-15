@@ -6,44 +6,44 @@ import styles from './HeadButtons.module.scss';
 import { Grid } from '@material-ui/core';
 
 
-const Component = ({className, categories}) => (
+const Component = ({className, rings}) => (
   <div className={clsx(className, styles.root)}>
     <Grid
       container
       direction="row"
       justifyContent="space-between"
       alignItems="center">
-      <NavLink exact to={`/products/${categories[1].id}`} className={styles.firstLink}>
-        <Grid item xs={12} sm={12} className={styles.Box}>
-          <img src={categories[1].image} alt={categories[1].id} className={styles.imageButton}/>
-          <p className={styles.textButton}>{categories[1].name}</p>
+      <NavLink exact to={`/products/${rings[1].category}`} className={styles.firstLink}>
+        <Grid item sm={12} className={styles.Box}>
+          <img src={rings[1].categoryImg} alt={rings[1].category} className={styles.imageButton}/>
+          <p className={styles.textButton}>{rings[1].categoryName}</p>
         </Grid>
       </NavLink>
-      <NavLink exact to={`/products/${categories[2].id}`} className={styles.link}>
-        <Grid item xs={12} sm={12} className={styles.Box}>
-          <img src={categories[2].image} alt={categories[2].id} className={styles.imageButton}/>
-          <p className={styles.textButton}>{categories[2].name}</p>
+      <NavLink exact to={`/products/${rings[2].category}`} className={styles.firstLink}>
+        <Grid item sm={12} className={styles.Box}>
+          <img src={rings[2].categoryImg} alt={rings[2].category} className={styles.imageButton}/>
+          <p className={styles.textButton}>{rings[2].categoryName}</p>
         </Grid>
       </NavLink>
-      <NavLink exact to={`/products/${categories[3].id}`} className={styles.link}>
-        <Grid item xs={12} sm={12} className={styles.Box}>
-          <img src={categories[3].image} alt={categories[3].id} className={styles.imageButton}/>
-          <p className={styles.textButton}>{categories[3].name}</p>
+      <NavLink exact to={`/products/${rings[3].category}`} className={styles.firstLink}>
+        <Grid item sm={12} className={styles.Box}>
+          <img src={rings[3].categoryImg} alt={rings[3].category} className={styles.imageButton}/>
+          <p className={styles.textButton}>{rings[3].categoryName}</p>
         </Grid>
       </NavLink>
-      <NavLink exact to={`/products/${categories[0].id}`} className={styles.link}>
-        <Grid item xs={12} sm={12} className={styles.Box}>
-          <img src={categories[0].image} alt={categories[0].id} className={styles.imageButton}/>
-          <p className={styles.textButton}>{categories[0].name}</p>
+      <NavLink exact to={`/products/${rings[0].category}`} className={styles.firstLink}>
+        <Grid item sm={12} className={styles.Box}>
+          <img src={rings[0].categoryImg} alt={rings[0].category} className={styles.imageButton}/>
+          <p className={styles.textButton}>{rings[0].categoryName}</p>
         </Grid>
       </NavLink>
-      <NavLink exact to={`/products/${categories[4].id}`} className={styles.link}>
-        <Grid item xs={12} sm={12} className={styles.Box}>
-          <img src={categories[4].image} alt={categories[4].id} className={styles.imageButton}/>
-          <p className={styles.textButton}>{categories[4].name}</p>
+      <NavLink exact to={`/products/${rings[4].category}`} className={styles.firstLink}>
+        <Grid item sm={12} className={styles.Box}>
+          <img src={rings[4].categoryImg} alt={rings[4].category} className={styles.imageButton}/>
+          <p className={styles.textButton}>{rings[4].categoryName}</p>
         </Grid>
       </NavLink>
-    
+
     </Grid>
   </div>
 );
@@ -51,7 +51,7 @@ const Component = ({className, categories}) => (
 Component.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
-  categories: PropTypes.array,
+  rings: PropTypes.array,
 };
 
 export {

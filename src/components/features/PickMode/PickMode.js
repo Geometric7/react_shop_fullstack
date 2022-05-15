@@ -29,12 +29,11 @@ class Component extends React.Component {
           slidesPerScroll={1}
           animationSpeed={1500}
           clickToChange
-          centered
           value={value}
           onChange={this.onChange}
           className={styles.Carousel}
         >
-          <img  className="img-example" src={variants[value].image} alt={variants[value].variant} />
+          <img  className={styles.imgCarousel} src={variants[value].image} alt={variants[value].variant} />
         </Carousel>
         <Dots
           value={value}

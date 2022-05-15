@@ -30,9 +30,17 @@
       width: 100%;
       opacity: 0.2;
       &:hover {
-        opacity: 0.4;
+        opacity: 0.7;
         transition: all 1s ease-in-out;
       }
+    }
+    &:hover .Maintext {
+      color: $text-color-light;
+      transition: all 1s ease-in-out;
+    }
+    &:hover .Subtext {
+      color: $text-color-light;
+      transition: all 1s ease-in-out;
     }
 
     .Maintext {
@@ -42,10 +50,11 @@
       color: $text-color-dark;
       margin-top: 150px;
       text-align: center;
+      text-decoration: none;
       opacity: 1;
       .flare {
         font-size: 35px;
-        color: coral;
+        color: purple;
       }
     }
     .Subtext {
@@ -64,22 +73,16 @@
     display: flex;
     justify-content: flex-end;
   }
-  .imageButton {
-    height: 350px;
-    width: 100%;
-    object-fit: cover;
-  }
-  .textButton {
-    position: absolute;
-    text-decoration: none;
-    color: $text-color-light;
-    font-family: $logo-font;
-    font-size: 55px;
-    margin-top: 150px;
-    margin-right: 1rem;
-  }
-  .link {
-    width: 45%;
-    margin: 1.5rem 0;
+  @media (max-width: 768px) {
+    .TextBox {
+      height: 400px;
+
+      .Maintext {
+        font-size: 30px;
+      }
+      .Subtext {
+        font-size: 20px;
+      }
+    }
   }
 }
