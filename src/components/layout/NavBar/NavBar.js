@@ -30,7 +30,7 @@ const Component = () => (
           variant="h4"
           className={styles.brand}>
           Enchanted
-          <span className={styles.linka}> Rings</span>
+          <span className={styles.brand}> Rings</span>
         </Typography>
       </Link>
       <Button

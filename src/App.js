@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 import { createTheme, StylesProvider, ThemeProvider } from '@material-ui/core/styles';
@@ -12,7 +12,7 @@ import { Homepage } from './components/views/Homepage/Homepage';
 import { NotFound } from './components/views/NotFound/NotFound';
 import { Ring } from './components/views/Ring/Ring';
 import { Products } from './components/views/Products/Products';
-
+import { OrderSummary } from './components/views/OrderSummary/OrderSummary';
 
 const theme = createTheme({
   palette: {
@@ -27,12 +27,13 @@ const App = () => (
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <MainLayout>
-            <Routes>
-              <Route exact path='/' component={Homepage} />
-              <Route exact path='/products/:id' component={Products} />
+            <Switch>
+              <Route exact path='/' component={ Homepage } />
+              <Route exact path='/products/:id' component={ Products } />
+              <Route exact path='/order' component={ OrderSummary } />
               <Route exact path='/ring/:id' component={ Ring } />
-              <Route path='*' component={NotFound} />
-            </Routes>
+              <Route path='*' component={ NotFound } />
+            </Switch>
           </MainLayout>
         </ThemeProvider>
       </StylesProvider>

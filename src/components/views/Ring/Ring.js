@@ -11,12 +11,12 @@ import clsx from 'clsx';
 import { InputMode } from '../../common/InputMode/InputMode';
 import { PickMode } from '../../features/PickMode/PickMode';
 import { connect } from 'react-redux';
-import { getRingByOption } from '../../../redux/ringsRedux';
-import { getOptionsByProducts } from '../../../redux/optionRedux';
+import { getRingByVariant } from '../../../redux/ringsRedux';
+import { getVariantsByProducts } from '../../../redux/variantRedux';
 import { addToCart } from '../../../redux/cartRedux';
 import styles from './Ring.module.scss';
 
-const Component = ({ ring, options, className}) => {
+const Component = ({ ring, variants, className}) => {
   const [value, setValue] = React.useState('female');
   const [amount, setAmount] = React.useState(1);
 
@@ -37,7 +37,7 @@ const Component = ({ ring, options, className}) => {
         alignItems="center">
         <Grid item xs={12} sm={6}>
           <Typography component="p">Price {ring.price}$</Typography>
-          <Typography component="h1">{ring.option}</Typography>
+          <Typography component="h1">{ring.variant}</Typography>
           <Typography component="p"> {ring.description}</Typography>
           <FormControl component="fieldset"
             className={styles.select}>
@@ -46,15 +46,15 @@ const Component = ({ ring, options, className}) => {
               name="select"
               value={value}
               onChange={handleChange}>
-              {options.map( option => (
+              {variants.map( variant => (
                 <FormControlLabel
-                  key={option.option}
-                  value={option.option}
+                  key={variant.variant}
+                  value={variant.variant}
                   control=
                     {<Radio
                       className={styles.radio}
                       style= {{color: '#947EC3'}} />}
-                  label={option.option} />
+                  label={variant.variant} />
               ))}
             </RadioGroup>
           </FormControl>
@@ -70,7 +70,7 @@ const Component = ({ ring, options, className}) => {
             onClick={() => addToCart(ring, amount)}>Add to Card</Button>
         </Grid>
         <Grid item xs={12} sm={6}>
-          <PickMode options={options}/>
+          <PickMode variants={variants}/>
         </Grid>
       </Grid>
     </Container>
@@ -80,7 +80,7 @@ const Component = ({ ring, options, className}) => {
 Component.propTypes = {
   className: PropTypes.string,
   ring: PropTypes.object,
-  options: PropTypes.array,
+  variants: PropTypes.array,
   match: PropTypes.shape({
     params: PropTypes.shape({
       id: PropTypes.string,
@@ -89,8 +89,8 @@ Component.propTypes = {
 };
 
 const mapStateToProps = (state, props) => ({
-  ring: getRingByOption(state,  props.match.params.id),
-  options: getOptionsByProducts(state, props.match.params.id),
+  ring: getRingByVariant(state,  props.match.params.id),
+  variants: getVariantsByProducts(state, props.match.params.id),
 });
 
 const mapDispatchToProps = dispatch => ({

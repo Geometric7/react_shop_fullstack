@@ -2,7 +2,7 @@
     {
         "_id": 1,
         "name": "air ring1",
-        "option": "Ring with air glass",
+        "variant": "Ring with air glass",
         "image": "https://designwrld.com/wp-content/uploads/2016/08/New-miniature-worlds-encased-into-wooden-rings-by-secret-wood-04-740x737.jpg",
         "description": "TEST desc",
         "price": 55,
@@ -13,7 +13,7 @@
       {
         "_id": 2,
         "name": "air ring2",
-        "option": "Ring with rose air",
+        "variant": "Ring with rose air",
         "image": "https://designwrld.com/wp-content/uploads/2016/08/New-miniature-worlds-encased-into-wooden-rings-by-secret-wood-01-740x740.jpg",
         "description": "Test desc",
         "price": 55,
@@ -24,7 +24,7 @@
       {
         "_id": 3,
         "name": "earth ring1",
-        "option": "Ring with desert earth",
+        "variant": "Ring with desert earth",
         "image": "https://designwrld.com/wp-content/uploads/2016/08/New-miniature-worlds-encased-into-wooden-rings-by-secret-wood-05-740x740.jpg",
         "description": "Test desc",
         "price": 50,
@@ -35,7 +35,7 @@
       {
         "_id": 4,
         "name": "earth ring2",
-        "option": "Ring with ocean earth",
+        "variant": "Ring with ocean earth",
         "image": "http://static.demilked.com/wp-content/uploads/2016/04/miniature-worlds-wooden-rings-secret-forest-14.jpg",
         "description": "test desc",
         "price": 50,
@@ -46,7 +46,7 @@
       {
         "_id": 5,
         "name": "fire ring1",
-        "option": "Ring with phoenix fire",
+        "variant": "Ring with phoenix fire",
         "image": "https://cdn.thisiswhyimbroke.com/images/handmade-wooden-rings-640x534.jpg",
         "description": "Test desc",
         "price": 250,
@@ -57,7 +57,7 @@
       {
         "_id": 6,
         "name": "fire ring2",
-        "option": "Ring with lava fire",
+        "variant": "Ring with lava fire",
         "image": "https://cdn.thisiswhyimbroke.com/images/handmade-wooden-landscape-rings-forestmagicwithrivka-640x534.jpg",
         "description": "Test desc",
         "price": 250,
@@ -68,7 +68,7 @@
       {
         "_id": 7,
         "name": "fire ring3",
-        "option": "Ring with fireflower",
+        "variant": "Ring with fireflower",
         "image": "https://cdn.unicun.com/wp-content/uploads/2020/08/Hc9f183033b8b4a49bc113ce664c328dcD-600x600.jpg",
         "description": "Test desc",
         "price": 250,
@@ -79,7 +79,7 @@
       {
         "_id": 8,
         "name": "water ring1",
-        "option": "Ring with light water ",
+        "variant": "Ring with light water ",
         "image": "https://i.pinimg.com/originals/a7/96/94/a79694ae16cd095fce120b2b00dd9b7a.jpg",
         "description": "Test desc",
         "price": 50,
@@ -90,7 +90,7 @@
       {
         "_id": 9,
         "name": "Water ring2",
-        "option": "Ring with storm water",
+        "variant": "Ring with storm water",
         "image": "https://cdn.shopify.com/s/files/1/0401/7612/4055/products/bague_resine_bleu_large.jpg?v=1618110328",
         "description": "Test desc",
         "price": 50,
@@ -101,7 +101,7 @@
       {
         "_id": 10,
         "name": "Water ring3",
-        "option": "Ring with snowy mountain",
+        "variant": "Ring with snowy mountain",
         "image": "https://static.boredpanda.com/blog/wp-content/uploads/2016/08/resin-rings-miniature-scenes-secret-forest-31.jpg",
         "description": "Test desc",
         "price": 50,

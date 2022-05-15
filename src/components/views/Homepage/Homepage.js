@@ -20,7 +20,7 @@ const Component = ({className, categories, children}) => (
     <Grid
       container
       direction="row"
-      justify="space-evenly"
+      justifyContent="space-evenly"
       alignItems="center">
       <Grid item xs={12} sm={6}>
         <img className={styles.leftImage} src={ringImage1} alt="ring"/>

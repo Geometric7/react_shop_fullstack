@@ -17,3 +17,11 @@
     opacity: 1;
   }
 }
+@media (max-width: 768px) {
+  .component {
+  width: 30px;
+  line-height: 1;
+  font-size: 0.6rem;
+  margin: 0.5rem;
+  }
+}

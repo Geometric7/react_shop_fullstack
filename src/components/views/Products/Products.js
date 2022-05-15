@@ -21,18 +21,18 @@ const Component = ({ className, children, categoryRings, category }) => (
     <h2>{category[0].name}!</h2>
     <Divider variant="middle" className={styles.divider} />
     {categoryRings.map((ring) => (
-      <div key={ring.option}>
+      <div key={ring.variant}>
         <h3>{ring.name}</h3>
-        <NavLink key={ring.option} exact to={`/ring./${ring.option}`}>
+        <NavLink key={ring.variant} exact to={`/ring./${ring.variant}`}>
           <Card className={styles.Card}>
             <CardMedia
               className={styles.BoardImg}
               component="img"
               image={ring.image}
-              option={ring.option}
+              variant={ring.variant}
             />
             <CardContent className={styles.Content}>
-              <Typography component="h3">{ring.option}</Typography>
+              <Typography component="h3">{ring.variant}</Typography>
               <Typography component="p" className={styles.description}>
                 {ring.description}
               </Typography>

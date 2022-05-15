@@ -7,8 +7,8 @@ export const getRingsByCategory = ({ rings }, id ) => {
   return categoryRings;
 };
 
-export const getRingByOption = ({rings}, id) => {
-  const ring = rings.data.filter(ring => ring.option === id);
+export const getRingByVariant = ({rings}, id) => {
+  const ring = rings.data.filter(ring => ring.variant === id);
   return ring.length ? ring[0] : { error: true };
 };
 

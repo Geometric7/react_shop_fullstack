@@ -1,14 +1,14 @@
 /* selectors */
-export const getOptions = ({options}) => options;
+export const getVariants = ({variants}) => variants;
 
-export const getOptionsByProducts = ({ options }, id ) => {
-  const option = options.filter(opt=> opt.id === id);
-  return option;
+export const getVariantsByProducts = ({ variants }, id ) => {
+  const variant = variants.filter(opt=> opt.id === id);
+  return variant;
 };
 
 
 /* action name creator */
-const reducerName = 'options';
+const reducerName = 'variants';
 const createActionName = name => `app/${reducerName}/${name}`;
 
 /* action types */

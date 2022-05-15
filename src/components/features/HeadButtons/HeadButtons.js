@@ -11,7 +11,7 @@ const Component = ({className, categories}) => (
     <Grid
       container
       direction="row"
-      justify="space-between"
+      justifyContent="space-between"
       alignItems="center">
       <NavLink exact to={`/products/${categories[1].id}`} className={styles.firstLink}>
         <Grid item xs={12} sm={12} className={styles.Box}>
@@ -37,6 +37,13 @@ const Component = ({className, categories}) => (
           <p className={styles.textButton}>{categories[0].name}</p>
         </Grid>
       </NavLink>
+      <NavLink exact to={`/products/${categories[4].id}`} className={styles.link}>
+        <Grid item xs={12} sm={12} className={styles.Box}>
+          <img src={categories[4].image} alt={categories[4].id} className={styles.imageButton}/>
+          <p className={styles.textButton}>{categories[4].name}</p>
+        </Grid>
+      </NavLink>
+    
     </Grid>
   </div>
 );

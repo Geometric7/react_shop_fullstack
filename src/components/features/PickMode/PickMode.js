@@ -15,12 +15,12 @@ class Component extends React.Component {
   }
   static propTypes = {
     className: PropTypes.string,
-    options: PropTypes.array,
+    variants: PropTypes.array,
   };
   onChange = value => this.setState({ value });
 
   render() {
-    const {options} = this.props;
+    const {variants} = this.props;
     const {value} = this.state;
     return (
       <div className={ styles.root}>
@@ -34,17 +34,17 @@ class Component extends React.Component {
           onChange={this.onChange}
           className={styles.Carousel}
         >
-          <img  className="img-example" src={options[value].image} alt={options[value].option} />
+          <img  className="img-example" src={variants[value].image} alt={variants[value].variant} />
         </Carousel>
         <Dots
           value={value}
           onChange={this.onChange}
           className={styles.thumbnails}
           thumbnails={[
-            (<img key={1} className={styles.thumbImg} src={options[0].image} alt={options[0].option} />),
-            (<img key={2} className={styles.thumbImg} src={options[1].image} alt={options[1].option} />),
-            (<img key={3} className={styles.thumbImg} src={options[2].image} alt={options[2].option} />),
-            (<img key={4} className={styles.thumbImg} src={options[3].image} alt={options[3].option} />),
+            (<img key={1} className={styles.thumbImg} src={variants[0].image} alt={variants[0].variant} />),
+            (<img key={2} className={styles.thumbImg} src={variants[1].image} alt={variants[1].variant} />),
+            (<img key={3} className={styles.thumbImg} src={variants[2].image} alt={variants[2].variant} />),
+            (<img key={4} className={styles.thumbImg} src={variants[3].image} alt={variants[3].variant} />),
           ]}
         />
       </div>

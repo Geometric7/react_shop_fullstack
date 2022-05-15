@@ -5,14 +5,14 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import { initialState } from './initialState';
 import { reducer as ringsReducer } from './ringsRedux';
 import { reducer as categoriesReducer } from './categoriesRedux';
-import { reducer as optionReducer } from './optionRedux';
+import { reducer as variantReducer } from './variantRedux';
 import { reducer as cartReducer } from './cartRedux';
 
 // define reducers
 const reducers = {
   rings: ringsReducer,
   categories: categoriesReducer,
-  options: optionReducer,
+  variants: variantReducer,
   cart: cartReducer,
 };
 
