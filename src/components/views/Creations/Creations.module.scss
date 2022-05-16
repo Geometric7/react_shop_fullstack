@@ -1,0 +1,87 @@
+@import "../../../styles/settings.scss";
+
+.root {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  .Card {
+    display: flex;
+    border-radius: 4px;
+    margin: 30px 30px;
+    transition: 1s all;
+    align-content: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 30vw;
+    height: 60vh;
+    &:hover {
+      transform: translate(-10px, 10px);
+    }
+
+    .Content {
+      width: 100%;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 1.8rem;
+      text-decoration: none;
+      font-family: $header-font;
+    }
+
+    .BoardImg {
+      display: flex;
+      overflow: hidden;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .button {
+      opacity: 0;
+      transition: 1s all;
+      color: $base-color;
+    }
+
+    p {
+      font-size: 1.1rem;
+      opacity: 0.6;
+      margin: 5px 0;
+      text-decoration: none;
+      font-family: $text-font;
+    }
+    .description {
+      text-overflow: ellipsis;
+      overflow: auto;
+      max-height: 48%;
+    }
+    &:hover .button {
+      opacity: 1;
+    }
+  }
+
+  a,
+  a:hover {
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    .Card {
+      display: flex;
+      flex-direction: column;
+      margin: 10px 0;
+      justify-content: center;
+      width: 85vw;
+      .Content {
+        width: 100%;
+      }
+      .BoardImg {
+        width: 100%;
+      }
+      h2 {
+        font-size: 24px;
+      }
+    }
+  }
+}

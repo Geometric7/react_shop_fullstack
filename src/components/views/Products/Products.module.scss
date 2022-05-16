@@ -31,14 +31,14 @@
     align-content: center;
     justify-content: space-between;
     flex-direction: row;
-    width: 70vw;
+    width: 90vw;
     height: 50vh;
     &:hover {
       transform: translate(-10px, 10px);
     }
 
     .Content {
-      width: 35%;
+      width: 40%;
       text-align: center;
     }
 
@@ -94,6 +94,9 @@
      }
      .BoardImg {
        width: 100%;
+     }
+     h2 {
+       font-size: 24px;
      }
    }
  }

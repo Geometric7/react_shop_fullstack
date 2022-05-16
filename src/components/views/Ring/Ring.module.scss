@@ -1,43 +1,63 @@
-@import '../../../styles/settings.scss';
+@import "../../../styles/settings.scss";
 
- .root {
-     margin-top: 100px;
+.root {
+  margin-top: 100px;
 
-     p {
-         font-family: $text-font;
-         font-weight: 600;
-         color: $text-color-dark;
-         opacity: 0.8;
-         text-align: center;
-         margin: 2rem;
-     }
-     h1 {
-         font-family: $header-font;
-         color: $text-color-dark;
-         font-size: 3rem;
-         text-align: center;
-         margin: 2rem;
-     }
-     .select {
-        width: 90%;
-        margin: 2rem;
-        color: $text-color-dark;
-        font-family: $text-font;
-
+  p {
+    font-family: $text-font;
+    font-weight: 600;
+    color: $text-color-dark;
+    opacity: 0.8;
+    text-align: center;
+    margin: 2rem;
+  }
+  .rate {
+    font-family: $text-font;
+    font-weight: 600;
+    color: $text-color-dark;
+    opacity: 0.8;
+    text-align: center;
+    margin: 1.5rem;
+  }
+  h1 {
+    font-family: $header-font;
+    color: $text-color-dark;
+    font-size: 3rem;
+    text-align: center;
+    margin: 2rem;
+  }
+  .select {
+    width: 90%;
+    margin: 2rem;
+    color: $text-color-dark;
+    font-family: $text-font;
+  }
+  .radio:hover {
+    background-color: inherit;
+    color: $text-color-light;
+  }
+  .button {
+    width: 60%;
+    background-color: $base-color;
+    height: 50px;
+    color: $text-color-light;
+    &:hover {
+      background-color: lighten($color: $base-color, $amount: 5%);
     }
-    .radio:hover {
-        background-color: inherit;
-        color: $text-color-light;
+  }
+  @media (max-width: 768px) {
+    p {
+      margin: 1rem;
+    }
+    .select {
+      margin: 1rem;
+    }
+    h1 {
+      font-size: 1.5rem;
+      margin: 1rem;
     }
     .button {
-        width: 60%;
-        background-color: $base-color;
-        margin-bottom: 10px;
-        height: 50px;
-        color: $text-color-light;
-        &:hover {
-            background-color: lighten($color: $base-color, $amount: 5%);
-        }
+      margin: 1rem;
     }
-
- }
+  }
+}

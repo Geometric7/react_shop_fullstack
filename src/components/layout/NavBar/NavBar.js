@@ -23,7 +23,7 @@ const Component = () => {
           color="inherit"
           aria-label="menu"
         >
-          <Link to="/" className={styles.login}>
+          <Link to="/creations" className={styles.login}>
             Our Creations
           </Link>
         </Button>

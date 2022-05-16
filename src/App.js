@@ -12,6 +12,7 @@ import { Homepage } from './components/views/Homepage/Homepage';
 import { NotFound } from './components/views/NotFound/NotFound';
 import { Ring } from './components/views/Ring/Ring';
 import { Products } from './components/views/Products/Products';
+import { Creations } from './components/views/Creations/Creations';
 import { OrderSummary } from './components/views/OrderSummary/OrderSummary';
 
 const theme = createTheme({
@@ -32,6 +33,7 @@ const App = () => (
               <Route exact path='/products/:id' component={ Products } />
               <Route exact path='/order' component={ OrderSummary } />
               <Route exact path='/ring/:id' component={ Ring } />
+              <Route exact path='/creations' component={ Creations } />
               <Route path='*' component={ NotFound } />
             </Switch>
           </MainLayout>

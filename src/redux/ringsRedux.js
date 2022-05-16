@@ -17,6 +17,11 @@ export const getRingByVariant = ({rings}, id) => {
 };
 export const getRingsById = ({ rings }) => rings.opened;
 
+export const getRingsByRate = ({ rings }) => {
+  const bestRing = rings.data.filter(ring => ring.rate > 4);
+  return bestRing;
+};
+
 /* action name creator */
 const reducerName = 'rings';
 const createActionName = name => `app/${reducerName}/${name}`;
