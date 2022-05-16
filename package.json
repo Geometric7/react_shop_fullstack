@@ -39,9 +39,11 @@
     "uuid": "^8.3.2"
   },
   "scripts": {
+    "start:server": "nodemon backend/server.js",
     "start": "run-p start:* ",
     "start-silent": "run-p start > /dev/null",
     "start:react": "react-scripts start",
+    "start-dev": "npm-run-all -l -p start:*",
     "start-and-test": "run-p start-silent test ",
     "build": "react-scripts build",
     "test": "react-scripts test --noStackTrace",

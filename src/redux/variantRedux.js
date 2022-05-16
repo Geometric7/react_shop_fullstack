@@ -1,6 +1,5 @@
 import axios from 'axios';
-export const API_URL = (process.env.NODE_ENV === 'production') ? '/api' : 'http://localhost:8000/api';
-
+import {API_URL} from '../config';
 
 /* selectors */
 export const getVariants = ({variants}) => variants.data;
@@ -25,15 +24,11 @@ export const fetchSuccess = payload => ({ payload, type: FETCH_SUCCESS });
 export const fetchError = payload => ({ payload, type: FETCH_ERROR });
 /* thunk creators */
 export const loadVariantsRequest = () => {
-  return (dispatch, getState) => {
+  return async dispatch => {
+    dispatch(fetchStarted());
     try {
-      const { variants } = getState();
-      if (!variants.data.length || variants.loading.active === false) {
-        dispatch(fetchStarted());
-        axios.get(`${API_URL}/variant`).then((res) => {
-          dispatch(fetchSuccess(res.data));
-        });
-      }
+      let res = await axios.get(`${API_URL}/variant`);
+      dispatch(fetchSuccess(res.data));
     } catch (err) {
       dispatch(fetchError(err.message || true));
     }

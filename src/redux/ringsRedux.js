@@ -1,6 +1,6 @@
 import axios from 'axios';
+import {API_URL} from '../config';
 
-export const API_URL = (process.env.NODE_ENV === 'production') ? '/api' : 'http://localhost:8000/api';
 /* selectors */
 export const getAll = ({rings}) => rings.data;
 
@@ -40,15 +40,11 @@ export const fetchRingsById = payload => ({ payload, type: FETCH_RINGS_BY_ID });
 
 /* thunk creators */
 export const fetchPublished = () => {
-  return (dispatch, getState) => {
+  return async dispatch => {
+    dispatch(fetchStarted());
     try {
-      const { rings } = getState();
-      if (!rings.data.length || rings.loading.active === false) {
-        dispatch(fetchStarted());
-        axios.get(`${API_URL}/rings`).then((res) => {
-          dispatch(fetchSuccess(res.data));
-        });
-      }
+      let res = await axios.get(`${API_URL}/rings`);
+      dispatch(fetchSuccess(res.data));
     } catch (err) {
       dispatch(fetchError(err.message || true));
     }

@@ -16,15 +16,9 @@ import { getAll } from '../../../redux/ringsRedux';
 import { fetchPublished } from '../../../redux/ringsRedux';
 
 class Component extends React.Component {
-  static propTypes = {
-    children: PropTypes.node,
-    className: PropTypes.string,
-    rings: PropTypes.array,
-    loadProduct: PropTypes.func,
-  };
-
   componentDidMount() {
-    this.props.loadProduct();
+    const { loadProduct } = this.props;
+    loadProduct();
   }
   render() {
     const { className, rings } = this.props;
@@ -57,6 +51,12 @@ class Component extends React.Component {
     );
   }
 }
+
+Component.propTypes = {
+  rings: PropTypes.array,
+  className: PropTypes.string,
+  loadProduct: PropTypes.func,
+};
 
 const mapStateToProps = (state) => ({
   rings: getAll(state),
