@@ -19,13 +19,11 @@ class Component extends React.Component {
   static propTypes = {
     className: PropTypes.string,
     categoryRings: PropTypes.array,
-    category: PropTypes.array,
     match: PropTypes.shape({
       params: PropTypes.shape({
         id: PropTypes.string,
       }),
     }),
-    getCategory: PropTypes.func,
     loadProduct:PropTypes.func,
   };
 
@@ -40,15 +38,15 @@ class Component extends React.Component {
         <h2>{categoryRings[0].categoryName}</h2>
         <Divider variant="middle" className={styles.divider} />
         {categoryRings.map((ring) => (
-          <div key={ring.variant}>
+          <div key={ring.option}>
             <h3>{ring.name}</h3>
-            <NavLink key={ring.variant} exact to={`/ring/${ring.variant}`}>
+            <NavLink key={ring.option} exact to={`/ring/${ring.option}`}>
               <Card className={styles.Card}>
                 <CardMedia
                   className={styles.BoardImg}
                   component="img"
                   image={ring.image}
-                  option={ring.option}
+                  variant={ring.option}
                 />
                 <CardContent className={styles.Content}>
                   <Typography component="h3">{ring.option}</Typography>
@@ -58,7 +56,7 @@ class Component extends React.Component {
                   <Button
                     className={styles.button}
                     variant="outlined"
-                    style={{color: '#947EC3'}}>See our projects</Button>
+                    style={{color: '#947EC3'}}>Discover</Button>
                   <Typography component="p">Price from: {ring.price}$</Typography>
                 </CardContent>
               </Card>

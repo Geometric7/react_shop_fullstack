@@ -2,7 +2,7 @@
 
 .AppBar {
   background: $base-color;
-  min-height: 100px;
+  min-height: 50x;
   justify-content: center;
 }
 
@@ -21,7 +21,7 @@
 }
 
 .menuButton {
-  margin-right: 1rem;
+  margin-right: -7rem;
 }
 @media (max-width: 768px) {
   .brand {

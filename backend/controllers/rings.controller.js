@@ -14,7 +14,7 @@ exports.getAll = async (req, res) => {
 exports.getById = async (req, res) => {
   try {
     const result = await Ring
-      .find({ _id: req.params.id});
+      .find({ id: req.params.id});
     if(!result) res.status(404).json({ ring: 'Not found' });
     else res.json(result);
   }

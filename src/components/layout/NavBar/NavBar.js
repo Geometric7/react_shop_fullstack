@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import styles from './NavBar.module.scss';
 import { Cart } from '../../features/Cart/Cart';
+import styles from './NavBar.module.scss';
 import cartStorage from '../../../_HOcomponents/cartStorage/cartStorage';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';

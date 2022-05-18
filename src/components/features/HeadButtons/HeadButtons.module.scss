@@ -4,15 +4,15 @@
   .Box {
     display: flex;
     justify-content: flex-end;
-    background-color: $base-color;
+    background-color: black;
     &:hover .imageButton{
-        opacity: 0.5;
+        opacity: 0.3;
         transition: all 0.5s ease-in-out;
     }
 
     &:hover .textButton {
         border: 2px solid $text-color-light;
-        transition: all 0.5s ease-in-out;
+        transition: all 0.1s ease-in-out;
     }
   }
 

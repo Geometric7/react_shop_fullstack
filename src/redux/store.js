@@ -1,15 +1,16 @@
 import {combineReducers, createStore, applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
-import { composeWithDevTools } from 'redux-devtools-extension';
+import { composeWithDevTools } from 'redux-devtools-extension/logOnlyInProduction';
 import { initialState } from './initialState';
-import { reducer as ringsReducer } from './ringsRedux';
-import { reducer as variantReducer } from './variantRedux';
 import { reducer as cartReducer } from './cartRedux';
+import { reducer as ringsReducer } from './ringsRedux';
+import { reducer as optionReducer } from './optionRedux';
+
 
 // define reducers
 const reducers = {
   rings: ringsReducer,
-  variants: variantReducer,
+  options: optionReducer,
   cart: cartReducer,
 };
 

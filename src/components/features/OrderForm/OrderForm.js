@@ -37,7 +37,7 @@ class Component extends React.Component {
     event.preventDefault();
 
     const validEmail = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
-    const validAddress = /^([^\\u0000-\u007F]|\w)+,?\s\d+[A-z]?(\/\d+[A-z]?)?$/;
+    const validAddress = /ul\.([A-ZĘÓĄŚŁŻŹĆŃ]{1}[a-zęóąśłżźćń]+\s)+/;
     const validPostCode = /[0-9]{2}-[0-9]{3}/;
 
     let error = null;
@@ -63,6 +63,7 @@ class Component extends React.Component {
         client: this.state.client,
         total: total,
       };
+
       sendOrder(payload);
       this.setState({
         client: {
@@ -90,14 +91,14 @@ class Component extends React.Component {
   };
 
   render() {
-    const DelayedPopup = delayDisconnect(PopUp);
+    const DelayedPopUp = delayDisconnect(PopUp);
     const { updateTextField, submitOrder } = this;
     const { client, error } = this.state;
     const { cart, total } = this.props;
     return (
       <div className={styles.root}>
         <form noValidate onSubmit={e => submitOrder(e, cart.rings, total)}>
-          {error ? <DelayedPopup variant='danger'>{error}</DelayedPopup> : null}
+          {error ? <DelayedPopUp variant='danger'>{error}</DelayedPopUp> : null}
 
           <Grid container>
             <Grid
@@ -182,7 +183,7 @@ class Component extends React.Component {
           <Button
             className={styles.button}
             variant="contained"
-            type="submit">Submit</Button>
+            type="submit">Send</Button>
         </form>
       </div>
     );

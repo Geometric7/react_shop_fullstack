@@ -2,11 +2,14 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const mongoose = require('mongoose');
+//const MongoStore = require('connect-mongo')(session);
+const session = require('express-session');
+
 
 const ringsRoutes = require('./routes/rings.routes');
 const orderRoutes = require('./routes/order.routes');
 const cartRoutes = require('./routes/cart.routes');
-const variantRoutes = require('./routes/variant.routes');
+const optionRoutes = require('./routes/option.routes');
 
 const app = express();
 
@@ -18,7 +21,7 @@ app.use(express.static(path.join(__dirname + '../build')));
 
 /* API ENDPOINTS */
 app.use('/api', ringsRoutes);
-app.use('/api', variantRoutes);
+app.use('/api', optionRoutes);
 app.use('/api', orderRoutes);
 app.use('/api', cartRoutes);
 
@@ -38,6 +41,12 @@ process.env.NODE_ENV === 'production' ?
 mongoose.connect('mongodb+srv://', { useNewUrlParser: true, useUnifiedTopology: true }) :
 mongoose.connect('mongodb://localhost:27017/EnchantedRings', { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
+
+//app.use(session({
+  //secret: 'shhh!',
+  //store: new MongoStore({ mongooseConnection: db }),
+  //}));
+
 db.once('open', () => {
   console.log('Successfully connected to the database');
 });

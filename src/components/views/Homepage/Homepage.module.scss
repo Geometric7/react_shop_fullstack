@@ -1,7 +1,7 @@
 @import "../../../styles/settings.scss";
 
 .root {
-  margin-top: 84px;
+  margin-top: 80px;
 
   .leftImage {
     object-fit: cover;
@@ -21,26 +21,27 @@
 
   .TextBox {
     position: relative;
-    height: 610px;
-    border-radius: 20%;
+    height: 515px;
+    border-radius: 5%;
     .image {
       position: absolute;
       border-radius: 5%;
       height: 100%;
       width: 100%;
-      opacity: 0.2;
+      opacity: 0.1;
       &:hover {
-        opacity: 0.7;
-        transition: all 1s ease-in-out;
+        opacity: 1;
+        background-color: black;
+        transition: all 0.5s ease-in-out;
       }
     }
     &:hover .Maintext {
       color: $text-color-light;
-      transition: all 1s ease-in-out;
+      transition: all 0.5s ease-in-out;
     }
     &:hover .Subtext {
       color: $text-color-light;
-      transition: all 1s ease-in-out;
+      transition: all 0.5s ease-in-out;
     }
 
     .Maintext {

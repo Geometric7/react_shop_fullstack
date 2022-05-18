@@ -2,17 +2,17 @@ import React from 'react';
 import styles from './PopUp.module.scss';
 import PropTypes from 'prop-types';
 
-const Component = ({ variant = '', children, ...otherProps }) => (
+const Component = ({ option = '', children, ...otherProps }) => (
   <div
     {...otherProps}
-    className={styles.component + variant.split(' ').map(name => ' ' + (styles[name] || name)).join('')}
+    className={styles.component + option.split(' ').map(name => ' ' + (styles[name] || name)).join('')}
   >
     {children}
   </div>
 );
 
 Component.propTypes = {
-  variant: PropTypes.string,
+  option: PropTypes.string,
   children: PropTypes.node,
 };
 

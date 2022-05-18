@@ -48,8 +48,17 @@ class Component extends React.Component {
                 <p className={styles.textButton}>{rings[3].categoryName}</p>
               </Grid>
             </NavLink>
+            <NavLink exact to={`/products/${rings[4].category}`} className={styles.link}>
+              <Grid item sm={12} className={styles.Box}>
+                <img src={rings[4].categoryImg} alt={rings[4].category} className={styles.imageButton}/>
+                <p className={styles.textButton}>{rings[4].categoryName}</p>
+              </Grid>
+            </NavLink>
+
           </Grid>
-        </div>) : (<NotFound/>)
+        </div>) : (<div>
+        <h1>Still loading. Please wait</h1>
+      </div>)
     );
   }
 }

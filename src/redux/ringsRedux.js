@@ -6,13 +6,11 @@ export const getAll = ({rings}) => rings.data;
 
 export const getRingsByCategory = ({ rings }, id ) => {
   const categoryRings = rings.data.filter(ring => ring.category === id);
-  console.log(categoryRings);
   return categoryRings;
 };
 
-export const getRingByVariant = ({rings}, id) => {
-  const ring = rings.data.filter(ring => ring.variant === id);
-  console.log(ring);
+export const getRingByOption = ({rings}, id) => {
+  const ring = rings.data.filter(ring => ring.option === id);
   return ring.length ? ring[0] : { error: true };
 };
 export const getRingsById = ({ rings }) => rings.opened;
@@ -31,12 +29,18 @@ const FETCH_START = createActionName('FETCH_START');
 const FETCH_SUCCESS = createActionName('FETCH_SUCCESS');
 const FETCH_ERROR = createActionName('FETCH_ERROR');
 const FETCH_RINGS_BY_ID = createActionName('FETCH_RINGS_BY_ID');
+const CHANGE_RATING = createActionName('CHANGE_RATING');
 
 /* action creators */
 export const fetchStarted = payload => ({ payload, type: FETCH_START });
 export const fetchSuccess = payload => ({ payload, type: FETCH_SUCCESS });
 export const fetchError = payload => ({ payload, type: FETCH_ERROR });
-export const fetchRingsById = payload => ({ payload, type: FETCH_RINGS_BY_ID });
+export const fetchRinggById = payload => ({ payload, type: FETCH_RINGS_BY_ID });
+export const updateRating = (payload, stars) => ({
+  payload,
+  stars,
+  type: CHANGE_RATING,
+});
 
 /* thunk creators */
 export const fetchPublished = () => {
@@ -56,7 +60,7 @@ export const loadProductByIdRequest = id => {
     dispatch(fetchStarted());
     try {
       let res = await axios.get(`${API_URL}/ring/${id}`);
-      dispatch(fetchRingsById(res.data));
+      dispatch(fetchRinggById(res.data));
     } catch (e) {
       dispatch(fetchError(e.message || true));
     }
@@ -103,6 +107,19 @@ export const reducer = (statePart = [], action = {}) => {
           error: action.payload,
         },
       };
+    }
+    case CHANGE_RATING: {
+      return statePart.map(ring => {
+        if (ring.id === action.payload) {
+          return {
+            ...ring,
+            rated: true,
+            stars: action.stars,
+          };
+        } else {
+          return ring;
+        }
+      });
     }
     default:
       return statePart;

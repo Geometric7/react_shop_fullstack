@@ -11,17 +11,17 @@ import { Grid } from '@material-ui/core';
 import Divider from '@material-ui/core/Divider';
 import Flare from '@material-ui/icons/Flare';
 
-import { connect } from 'react-redux';
-import { getAll } from '../../../redux/ringsRedux';
-import { fetchPublished } from '../../../redux/ringsRedux';
+//import { connect } from 'react-redux';
+//import { getAll } from '../../../redux/ringsRedux';
+//import { fetchPublished } from '../../../redux/ringsRedux';
 
 class Component extends React.Component {
-  componentDidMount() {
-    const { loadProduct } = this.props;
-    loadProduct();
-  }
+  //componentDidMount() {
+  //  const { loadProduct } = this.props;
+  //  loadProduct();
+  //}
   render() {
-    const { className, rings } = this.props;
+    const { className } = this.props;
     return (
       <Container className={clsx(className, styles.root)}>
         <Divider variant="middle" className={styles.divider} />
@@ -29,8 +29,7 @@ class Component extends React.Component {
           container
           direction="row"
           justifyContent="space-evenly"
-          alignItems="center"
-        >
+          alignItems="center">
           <Grid item xs={12} sm={6}>
             <img className={styles.leftImage} src={ringImage1} alt="ring1" />
           </Grid>
@@ -38,14 +37,16 @@ class Component extends React.Component {
             <img className={styles.image} src={ringImage2} alt="ring2" />
             <h2 className={styles.Maintext}>
               Test rings text
-              <Flare className={styles.flare} />
+
+              
+
             </h2>
             <h3 className={styles.Subtext}>Test ring text2 </h3>
           </Grid>
         </Grid>
 
         <Divider variant="middle" className={styles.divider} />
-        <HeadButtons rings={rings} />
+        <HeadButtons />
         <Divider variant="middle" className={styles.divider} />
       </Container>
     );
@@ -53,25 +54,26 @@ class Component extends React.Component {
 }
 
 Component.propTypes = {
-  rings: PropTypes.array,
+  //rings: PropTypes.array,
   className: PropTypes.string,
   loadProduct: PropTypes.func,
 };
 
-const mapStateToProps = (state) => ({
-  rings: getAll(state),
-});
+//const mapStateToProps = (state) => ({
+//rings: getAll(state),
+//});
 
-const mapDispatchToProps = (dispatch) => ({
-  loadProduct: () => dispatch(fetchPublished()),
-});
+//const mapDispatchToProps = (dispatch) => ({
+//loadProduct: () => dispatch(fetchPublished()),
+//});
 
-const ContainerComponent = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Component);
+//const ContainerComponent = connect(
+//mapStateToProps,
+//mapDispatchToProps
+//)(Component);
 
 export {
-  ContainerComponent as Homepage,
+  //ContainerComponent as Homepage,
   Component as HomepageComponent,
+  Component as Homepage,
 };

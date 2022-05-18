@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Princess+Sofia&family=Sora:wght@400&display=swap');
 
-$base-size: 15px;
+//$base-size: 15px;
 
 $base-color: #6A67CE;
 $background-color: #EEF3D2;
@@ -9,16 +9,7 @@ $text-color-light: #F7EFEF;
 $color-success: #36AE7C;
 $color-danger: #EB5353;
 
-@keyframes viewsFromRight {
-    0% {
-      margin-left: 150px;
-    }
-    100% {
-      margin-left: 0;
-    }
-  }
-
-$logo-font: 'Princess Sofia', cursive;
+$logo-font: 'Sora', sans-serif;
 $text-font: 'Sora', sans-serif;
 $header-font: 'Princess Sofia', cursive;
 

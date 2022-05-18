@@ -25,16 +25,16 @@
 
   .Card {
     display: flex;
-    border-radius: 4px;
-    margin: 30px 0;
+    border-radius: 10px;
+    margin: 20px;
     transition: 1s all;
     align-content: center;
     justify-content: space-between;
     flex-direction: row;
-    width: 90vw;
+    width: 80vw;
     height: 50vh;
     &:hover {
-      transform: translate(-10px, 10px);
+      transform: translate(-5px, 5px);
     }
 
     .Content {

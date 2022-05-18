@@ -18,7 +18,7 @@
       &:active,
       &:focus {
         border-color: $base-color;
-        background-color: lighten($base-color, 65%);
+        background-color: lighten($base-color, 75%);
       }
     }
 

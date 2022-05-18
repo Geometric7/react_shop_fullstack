@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import Container from '@material-ui/core/Container';
 import { connect } from 'react-redux';
 import { getRingsByRate, fetchPublished } from '../../../redux/ringsRedux.js';
+import Container from '@material-ui/core/Container';
+import { NavLink } from 'react-router-dom';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-import { NavLink } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
-import styles from './Creations.module.scss';
 import Divider from '@material-ui/core/Divider';
+import styles from './Creations.module.scss';
 
 class Component extends React.Component {
   static propTypes = {
@@ -36,7 +36,7 @@ class Component extends React.Component {
                   className={styles.BoardImg}
                   component="img"
                   image={ring.image}
-                  option={ring.option}
+                  variant={ring.option}
                 />
                 <CardContent className={styles.Content}>
                   <Typography component="h3">{ring.option}</Typography>
@@ -46,9 +46,9 @@ class Component extends React.Component {
                   <Button
                     className={styles.button}
                     variant="outlined"
-                    style={{ color: '#B689C0' }}
+                    style={{ color: '#947EC3' }}
                   >
-                    See our creations
+                    See more
                   </Button>
                   <Typography component="p">
                     Price from: {ring.price}$
@@ -78,6 +78,7 @@ const ContainerComponent = connect(
 )(Component);
 
 export {
+  // Component as Creations,
   ContainerComponent as Creations,
   Component as CreationsComponent,
 };

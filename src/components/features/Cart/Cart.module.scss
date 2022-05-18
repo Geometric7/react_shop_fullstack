@@ -3,14 +3,16 @@
 .cartlink {
   position: absolute;
   top: 10px;
-  right: 30px;
+  right: 5px;
   display: flex;
   align-items: center;
   font-size: 1.1rem;
+
   span {
     color: $text-color-light;
     font-weight: 100;
     padding-right: 15px;
+
   }
   button {
     margin: 0;
@@ -62,6 +64,7 @@
     font: 700 1.1rem $text-font;
     letter-spacing: 0.3rem;
     border-bottom: 1px solid $base-color;
+
   }
 
   & > div {
@@ -73,6 +76,7 @@
       font-size: 0.9rem;
       color: $text-color-dark;
       letter-spacing: 0.1rem;
+
     }
   }
 }
@@ -80,6 +84,7 @@
 .linkContinue {
   float: right;
   margin-top: 40px;
+  text-decoration: none;
   .button {
     width: 60%;
     background-color: $base-color;

@@ -24,12 +24,12 @@ const Component = ({ cart, total }) => {
             <CartItem key={ring._id} id={ring._id} />)
         ) : (
           <small className={styles.noProducts}>
-            <i>Your cartRedux is empty</i>
+            <i>Your cart is empty</i>
           </small>
         )}
       </div>
       <NavLink className={styles.link} exact to="/">
-        Add more!
+        Add more magic!
       </NavLink>
       <h2>Order Summary</h2>
       <div className={styles.summary}>
@@ -40,7 +40,7 @@ const Component = ({ cart, total }) => {
         <span>Order: </span>
         <span>{total}$</span>
       </div>
-      <h2>Contact info</h2>
+      <h2>Your order info</h2>
       <OrderForm />
     </div>
   );
@@ -48,6 +48,7 @@ const Component = ({ cart, total }) => {
 Component.propTypes = {
   cart: PropTypes.object,
   total: PropTypes.number,
+  history: PropTypes.object,
 };
 
 const mapStateToProps = (state) => ({

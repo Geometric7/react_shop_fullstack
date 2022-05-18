@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 import { InputMode } from '../../common/InputMode/InputMode';
 import DeleteIcon from '@material-ui/icons/Delete';
+import EditIcon from '@material-ui/icons/Edit';
 import styles from './CartItem.module.scss';
 import { connect } from 'react-redux';
 import { getProductFromCart, changeProductAmount, removeFromCart, addOrderNotes } from '../../../redux/cartRedux.js';
-import EditIcon from '@material-ui/icons/Edit';
 
 const Component = ({ ring, changeAmount, removeProduct, addNotes }) => {
 
@@ -32,7 +32,7 @@ const Component = ({ ring, changeAmount, removeProduct, addNotes }) => {
             <small>{ring.price}&nbsp;$</small>
           </div>
           <div>
-            <small>Quantity:&nbsp;</small>
+            <small>Amount:&nbsp;</small>
             <InputMode
               value={ring.amount}
               onChange={e => changeAmount({ id: ring._id, amount: parseInt(e.target.value) })}
@@ -42,14 +42,14 @@ const Component = ({ ring, changeAmount, removeProduct, addNotes }) => {
               aria-label="add-notes"
               className={styles.icon}
             >
-              <EditIcon style={{color: '#584332'}}/>
+              <EditIcon style={{color: '#947EC3'}}/>
             </Button>
             <Button
               onClick={() => removeProduct(ring)}
               aria-label="delete"
               className={styles.icon}
             >
-              <DeleteIcon style={{color: '#584332'}} />
+              <DeleteIcon style={{color: '#B689C0'}} />
             </Button>
           </div>
         </div>
