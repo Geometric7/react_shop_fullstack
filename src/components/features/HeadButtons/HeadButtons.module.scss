@@ -5,6 +5,8 @@
     display: flex;
     justify-content: flex-end;
     background-color: black;
+    //border-radius: 3%;
+
     &:hover .imageButton{
         opacity: 0.3;
         transition: all 0.5s ease-in-out;

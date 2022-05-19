@@ -1,0 +1,34 @@
+@import '../../../styles/settings.scss';
+
+.root {
+    background-color: #6A67CE;
+    color: #ffff;
+    padding: 1px;
+    font-family: 'Dosis', sans-serif;
+ }
+
+  .icon-box {
+    word-spacing: 0.5rem;
+    display: block;
+
+  }
+
+
+  a {
+    text-decoration: none;
+    color: var(--color-dark-cyan);
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-left: 2em;
+    padding-right: 2em;
+
+  }
+
+
+ @media (max-width: 768px) {
+   .root {
+     font-size: 12px;
+   }
+ }

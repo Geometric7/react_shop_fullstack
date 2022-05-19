@@ -18,9 +18,6 @@ const Component = ({ cart, total }) => {
   return (
     <div>
       <div className={styles.cartlink}>
-        <span>
-          {total}$
-        </span>
         <Button
           className={styles.shop}
           color="inherit"
@@ -28,6 +25,9 @@ const Component = ({ cart, total }) => {
           onClick={(e) => handleClick(e)}
         >
         </Button>
+        <span>
+          {total}$
+        </span>
       </div>
       {opened ? (
         <div className={`${styles.root} ${opened ? styles.expanded : ''}`}>

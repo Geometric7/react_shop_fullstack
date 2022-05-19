@@ -5,7 +5,7 @@ import { HeadButtons } from '../../features/HeadButtons/HeadButtons';
 
 import clsx from 'clsx';
 import styles from './Homepage.module.scss';
-import ringImage1 from '../../images/PopHome/pop_rings_1.jpg';
+import ringImage1 from '../../images/PopHome/pop_rings_5.jpg';
 import ringImage2 from '../../images/PopHome/pop_rings_2.jpg';
 import { Grid } from '@material-ui/core';
 import Divider from '@material-ui/core/Divider';
@@ -38,7 +38,7 @@ class Component extends React.Component {
             <h2 className={styles.Maintext}>
               Test rings text
 
-              
+
 
             </h2>
             <h3 className={styles.Subtext}>Test ring text2 </h3>

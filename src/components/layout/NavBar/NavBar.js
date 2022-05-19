@@ -24,7 +24,7 @@ const Component = () => {
           aria-label="menu"
         >
           <Link to="/creations" className={styles.login}>
-            Our Creations
+            Our New Creations
           </Link>
         </Button>
         <Link to="/" className={styles.login}>

@@ -1,7 +1,7 @@
 @import "../../../styles/settings.scss";
 
 .cartlink {
-  position: absolute;
+  position: static;
   top: 10px;
   right: 5px;
   display: flex;
@@ -11,7 +11,7 @@
   span {
     color: $text-color-light;
     font-weight: 100;
-    padding-right: 15px;
+    //padding-right: 15px;
 
   }
   button {
@@ -100,7 +100,7 @@
 @media (max-width: 768px) {
   .cartlink {
     span {
-      padding-right: 15px;
+      padding-right: 10px;
     }
   }
 }
