@@ -16,7 +16,7 @@ import { getOptionsByProducts, loadOptionsRequest } from '../../../redux/optionR
 import { addToCart } from '../../../redux/cartRedux';
 import styles from './Ring.module.scss';
 import { InputMode } from '../../common/InputMode/InputMode';
-import { PickMode } from '../../features/PickMode/PickMode';
+import { Select } from '../../features/Select/Select';
 
 class Component extends React.Component {
   state = {
@@ -99,7 +99,7 @@ class Component extends React.Component {
               <FormLabel component="legend">{ring.productSelect}</FormLabel>
               <RadioGroup
                 aria-label={ring.productSelect}
-                name="PickMode"
+                name="Select"
                 value={value}
                 onChange={this.handleChange}
               >
@@ -124,7 +124,7 @@ class Component extends React.Component {
             </span>
             <Button
               className={styles.button}
-              option="contained"
+              variant="contained"
               onClick={() => this.addRingToCart(amount, value)}
             >
               Add to cart
@@ -132,7 +132,7 @@ class Component extends React.Component {
           </Grid>
           <Grid item xs={12} sm={6}>
             {options.length ?
-              (<PickMode options={options} />) : null}
+              (<Select options={options} />) : null}
           </Grid>
         </Grid>
       </Container>

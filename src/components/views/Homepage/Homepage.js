@@ -10,6 +10,8 @@ import ringImage2 from '../../images/PopHome/pop_rings_2.jpg';
 import { Grid } from '@material-ui/core';
 import Divider from '@material-ui/core/Divider';
 import Flare from '@material-ui/icons/Flare';
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+
 
 //import { connect } from 'react-redux';
 //import { getAll } from '../../../redux/ringsRedux';
@@ -29,17 +31,18 @@ class Component extends React.Component {
           container
           direction="row"
           justifyContent="space-evenly"
-          alignItems="center">
+          alignItems="center"
+        >
           <Grid item xs={12} sm={6}>
-            <img className={styles.leftImage} src={ringImage1} alt="ring1" />
+            <img className={styles.leftImage} src={ringImage1} alt="ring" />
           </Grid>
           <Grid item xs={12} sm={6} className={styles.TextBox}>
-            <img className={styles.image} src={ringImage2} alt="ring2" />
+            <img className={styles.image} src={ringImage2} alt="wooden" />
             <h2 className={styles.Maintext}>
               Test rings text
 
 
-
+              <FavoriteBorderIcon className={styles.heart} />
             </h2>
             <h3 className={styles.Subtext}>Test ring text2 </h3>
           </Grid>

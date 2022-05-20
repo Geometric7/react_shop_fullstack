@@ -30,28 +30,28 @@ class Component extends React.Component {
                 <p className={styles.textButton}>{rings[0].categoryName}</p>
               </Grid>
             </NavLink>
-            <NavLink exact to={`/products/${rings[1].category}`} className={styles.link}>
-              <Grid item sm={12} className={styles.Box}>
-                <img src={rings[1].categoryImg} alt={rings[1].category} className={styles.imageButton}/>
-                <p className={styles.textButton}>{rings[1].categoryName}</p>
-              </Grid>
-            </NavLink>
-            <NavLink exact to={`/products/${rings[2].category}`} className={styles.link}>
-              <Grid item sm={12} className={styles.Box}>
-                <img src={rings[2].categoryImg} alt={rings[2].category} className={styles.imageButton}/>
-                <p className={styles.textButton}>{rings[2].categoryName}</p>
-              </Grid>
-            </NavLink>
             <NavLink exact to={`/products/${rings[3].category}`} className={styles.link}>
               <Grid item sm={12} className={styles.Box}>
                 <img src={rings[3].categoryImg} alt={rings[3].category} className={styles.imageButton}/>
                 <p className={styles.textButton}>{rings[3].categoryName}</p>
               </Grid>
             </NavLink>
-            <NavLink exact to={`/products/${rings[4].category}`} className={styles.link}>
+            <NavLink exact to={`/products/${rings[7].category}`} className={styles.link}>
               <Grid item sm={12} className={styles.Box}>
-                <img src={rings[4].categoryImg} alt={rings[4].category} className={styles.imageButton}/>
-                <p className={styles.textButton}>{rings[4].categoryName}</p>
+                <img src={rings[7].categoryImg} alt={rings[7].category} className={styles.imageButton}/>
+                <p className={styles.textButton}>{rings[7].categoryName}</p>
+              </Grid>
+            </NavLink>
+            <NavLink exact to={`/products/${rings[10].category}`} className={styles.link}>
+              <Grid item sm={12} className={styles.Box}>
+                <img src={rings[10].categoryImg} alt={rings[10].category} className={styles.imageButton}/>
+                <p className={styles.textButton}>{rings[10].categoryName}</p>
+              </Grid>
+            </NavLink>
+            <NavLink exact to={`/products/${rings[11].category}`} className={styles.link}>
+              <Grid item sm={12} className={styles.Box}>
+                <img src={rings[11].categoryImg} alt={rings[11].category} className={styles.imageButton}/>
+                <p className={styles.textButton}>{rings[11].categoryName}</p>
               </Grid>
             </NavLink>
 

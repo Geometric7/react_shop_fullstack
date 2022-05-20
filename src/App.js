@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
-import { createTheme, StylesProvider, ThemeProvider } from '@material-ui/core/styles';
+import { createMuiTheme, StylesProvider, ThemeProvider } from '@material-ui/core/styles';
 import { CssBaseline } from '@material-ui/core';
 import { store } from './redux/store';
 
@@ -14,7 +14,7 @@ import { Products } from './components/views/Products/Products';
 import { OrderSummary } from './components/views/OrderSummary/OrderSummary';
 import { Creations } from './components/views/Creations/Creations';
 
-const theme = createTheme({
+const theme = createMuiTheme({
   palette: {
     primary: { main: '#4D43DA' },
   },

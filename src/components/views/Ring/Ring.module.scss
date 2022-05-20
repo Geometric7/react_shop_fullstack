@@ -42,14 +42,14 @@
     height: 50px;
     color: $text-color-light;
     &:hover {
-      background-color: lighten($color: $base-color, $amount: 5%);
+      background-color: lighten($color: $palette-color, $amount: 5%);
     }
   }
   @media (max-width: 768px) {
     p {
       margin: 1rem;
     }
-    .PickMode {
+    .Select {
       margin: 1rem;
     }
     h1 {

@@ -3,14 +3,19 @@
 .root {
     background-color: #6A67CE;
     color: #ffff;
-    padding: 1px;
+    padding: 10px;
     font-family: 'Dosis', sans-serif;
- }
+
+    clear: both;
+    position: relative;
+    height: 80px;
+    margin-top: 100px;
+
+    }
 
   .icon-box {
     word-spacing: 0.5rem;
     display: block;
-
   }
 
 
@@ -23,7 +28,6 @@
     margin-right: 2px;
     padding-left: 2em;
     padding-right: 2em;
-
   }
 
 

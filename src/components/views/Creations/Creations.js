@@ -36,7 +36,7 @@ class Component extends React.Component {
                   className={styles.BoardImg}
                   component="img"
                   image={ring.image}
-                  variant={ring.option}
+                  option={ring.option}
                 />
                 <CardContent className={styles.Content}>
                   <Typography component="h3">{ring.option}</Typography>

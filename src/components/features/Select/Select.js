@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Carousel, { Dots } from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 
-import styles from './PickMode.module.scss';
+import styles from './Select.module.scss';
 
 class Component extends React.Component {
   constructor(props) {
@@ -40,10 +40,9 @@ class Component extends React.Component {
           onChange={this.onChange}
           className={styles.thumbnails}
           thumbnails={[
-            (<img key={0} className={styles.thumbImg} src={options[0].image} alt={options[0].option} />),
+            (<img key={1} className={styles.thumbImg} src={options[0].image} alt={options[0].option} />),
             (<img key={2} className={styles.thumbImg} src={options[1].image} alt={options[1].option} />),
-            (<img key={3} className={styles.thumbImg} src={options[2].image} alt={options[2].option} />),
-            (<img key={4} className={styles.thumbImg} src={options[3].image} alt={options[3].option} />),
+            (<img key={2} className={styles.thumbImg} src={options[2].image} alt={options[2].option} />),
 
           ]}
         />
@@ -53,6 +52,6 @@ class Component extends React.Component {
 }
 
 export {
-  Component as PickMode,
-  Component as PickModeComponent,
+  Component as Select,
+  Component as SelectComponent,
 };

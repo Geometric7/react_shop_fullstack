@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import clsx from 'clsx';
-
 import { connect } from 'react-redux';
 import { getRingsByCategory, fetchPublished } from '../../../redux/ringsRedux.js';
 import styles from './Products.module.scss';
@@ -46,7 +45,7 @@ class Component extends React.Component {
                   className={styles.BoardImg}
                   component="img"
                   image={ring.image}
-                  variant={ring.option}
+                  option={ring.option}
                 />
                 <CardContent className={styles.Content}>
                   <Typography component="h3">{ring.option}</Typography>
