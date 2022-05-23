@@ -3,7 +3,7 @@
 .root {
   margin-top: 100px;
   h2 {
-    font-family: $logo-font;
+    font-family: $header-font;
     text-decoration: none;
     font-size: 36px;
   }
@@ -45,7 +45,7 @@
     h3 {
       font-size: 1.8rem;
       text-decoration: none;
-      font-family: $header-font;
+      font-family: $text-font;
     }
 
     .BoardImg {

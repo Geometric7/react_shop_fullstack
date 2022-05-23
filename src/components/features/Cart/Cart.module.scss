@@ -83,7 +83,7 @@
 
 .linkContinue {
   float: right;
-  margin-top: 40px;
+  margin-top: 50px;
   text-decoration: none;
   .button {
     width: 60%;
@@ -92,7 +92,7 @@
     color: $text-color-light;
     letter-spacing: 0.1rem;
     &:hover {
-        background-color: lighten($color: $palette-color, $amount: 5%);
+        background-color: lighten($color: $palette-color, $amount: 90%);
     }
   }
 }

@@ -1,5 +1,9 @@
 @import "../../../styles/settings.scss";
 
+h2 {
+  text-align: center;
+}
+
 .root {
   .Box {
     display: flex;
@@ -8,13 +12,17 @@
     //border-radius: 3%;
 
     &:hover .imageButton{
-        opacity: 0.3;
-        transition: all 0.5s ease-in-out;
+        opacity: 0.5;
+        transition: all 0.4s ease-in-out;
+        -moz-filter: blur(2px);
+        -webkit-filter: blur(2px);
+        filter: blur(2px);
+        //transition: all 1s ease-in;
     }
 
     &:hover .textButton {
         border: 2px solid $text-color-light;
-        transition: all 0.1s ease-in-out;
+        transition: all 0.4s ease-in-out;
     }
   }
 
@@ -27,6 +35,7 @@
     height: 350px;
     width: 100%;
     object-fit: cover;
+    transition: all 0.2s ease-in-out;
   }
 
   .textButton {
@@ -36,9 +45,11 @@
     color: $text-color-light;
     font-family: $logo-font;
     font-size: 50px;
-    margin-top: 150px;
+    margin-top: 190px;
     margin-right: 1rem;
     border: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+
     &:hover {
         background-color: transparentize($color: $text-color-dark, $amount: 0.7);
     }
@@ -48,6 +59,12 @@
     width: 49%;
     margin: 1.5rem 0;
   }
+
+  .loadingText {
+    text-align: center;
+    color: red;
+  }
+
 
   @media (max-width: 1024px) {
     .link {

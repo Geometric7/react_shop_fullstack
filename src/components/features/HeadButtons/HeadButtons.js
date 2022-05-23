@@ -57,7 +57,7 @@ class Component extends React.Component {
 
           </Grid>
         </div>) : (<div>
-        <h1>Still loading. Please wait</h1>
+        <h2>Still Loading. Please Wait</h2>
       </div>)
     );
   }

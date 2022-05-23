@@ -5,8 +5,8 @@ import { HeadButtons } from '../../features/HeadButtons/HeadButtons';
 
 import clsx from 'clsx';
 import styles from './Homepage.module.scss';
-import ringImage1 from '../../images/PopHome/pop_rings_5.jpg';
-import ringImage2 from '../../images/PopHome/pop_rings_2.jpg';
+import ringImage1 from '../../images/PopHome/pop_rings_7.jpg';
+import ringImage2 from '../../images/PopHome/pop_rings_8.jpg';
 import { Grid } from '@material-ui/core';
 import Divider from '@material-ui/core/Divider';
 import Flare from '@material-ui/icons/Flare';
@@ -38,13 +38,8 @@ class Component extends React.Component {
           </Grid>
           <Grid item xs={12} sm={6} className={styles.TextBox}>
             <img className={styles.image} src={ringImage2} alt="wooden" />
-            <h2 className={styles.Maintext}>
-              Test rings text
-
-
-              <FavoriteBorderIcon className={styles.heart} />
+            <h2 className={styles.Maintext}>Discover unique handmade rings.
             </h2>
-            <h3 className={styles.Subtext}>Test ring text2 </h3>
           </Grid>
         </Grid>
 
@@ -80,3 +75,6 @@ export {
   Component as HomepageComponent,
   Component as Homepage,
 };
+
+//<FavoriteBorderIcon className={styles.flare} />
+//<h3 className={styles.Subtext}>unique, handmade rings </h3>
