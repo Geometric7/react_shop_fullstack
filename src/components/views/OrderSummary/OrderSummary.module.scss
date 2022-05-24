@@ -12,14 +12,16 @@
   text-decoration: none;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
-  margin: 30px 0;
+  margin-bottom: 100px;
+  text-align: left;
+  display: block;
   &:hover {
     opacity: 1;
   }
 }
 
 h2 {
-  margin-top: 20px;
+  margin-top: 40px;
   font-family: $header-font;
   letter-spacing: 0.1rem;
   text-decoration: none;
@@ -31,7 +33,7 @@ h2 {
 }
 
 .items {
-  margin: 30px 0;
+  margin: 30px 0px;
 }
 
 .summary {
@@ -43,6 +45,7 @@ h2 {
     letter-spacing: 0.1rem;
   }
 }
+
 @media (max-width: 768px) {
   .wrapper {
     margin: 0 10px;

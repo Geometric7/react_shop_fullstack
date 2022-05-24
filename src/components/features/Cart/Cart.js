@@ -21,7 +21,7 @@ const Component = ({ cart, total }) => {
         <Button
           className={styles.shop}
           color="inherit"
-          startIcon={<ShoppingCart />}
+          endIcon={<ShoppingCart />}
           onClick={(e) => handleClick(e)}
         >
         </Button>
@@ -39,7 +39,7 @@ const Component = ({ cart, total }) => {
               ))) :
                 (
                   <small className={styles.noProducts}>
-                    <i>Empty cart</i>
+                    <p>You have no items in your cart</p>
                   </small>
                 )
               }
@@ -61,7 +61,7 @@ const Component = ({ cart, total }) => {
                   className={styles.button}
                   variant="contained"
                   disabled={cart.rings.length ? false : true} onClick={(e) => handleClick(e)}>
-                  Continue the order
+                  GO TO CART
                 </Button>
               </NavLink>
             </div>

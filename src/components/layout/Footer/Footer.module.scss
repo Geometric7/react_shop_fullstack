@@ -5,7 +5,6 @@
     color: #ffff;
     padding: 10px;
     font-family: 'Dosis', sans-serif;
-
     clear: both;
     position: relative;
     height: 80px;
@@ -34,5 +33,17 @@
  @media (max-width: 768px) {
    .root {
      font-size: 12px;
+     margin-top: 10px;
+     height: 68px;
    }
+
+   .icon-box {
+     word-spacing: 0.5rem;
+     display: block;
+   }
+
+   a {
+     padding: 0.5em;
+   }
+
  }

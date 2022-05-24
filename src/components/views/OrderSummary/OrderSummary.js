@@ -24,7 +24,7 @@ const Component = ({ cart, total }) => {
             <CartItem key={ring._id} id={ring._id} />)
         ) : (
           <small className={styles.noProducts}>
-            <i>Your cart is empty</i>
+            <i>You have no items in your cart</i>
           </small>
         )}
       </div>

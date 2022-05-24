@@ -38,7 +38,6 @@ class Component extends React.Component {
         <Divider variant="middle" className={styles.divider} />
         {categoryRings.map((ring) => (
           <div key={ring.option}>
-            <h3>{ring.name}</h3>
             <NavLink key={ring.option} exact to={`/ring/${ring.option}`}>
               <Card className={styles.Card}>
                 <CardMedia

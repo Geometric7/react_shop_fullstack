@@ -78,7 +78,6 @@ class Component extends React.Component {
           alignItems="center"
         >
           <Grid item xs={12} sm={6}>
-            <Typography component="p">Price {ring.price}$</Typography>
             <Typography component="h1">{ring.option}</Typography>
             <Typography component="p"> {ring.description}</Typography>
             {ring ?
@@ -94,6 +93,7 @@ class Component extends React.Component {
                   value={rate}
                   onChange={this.handleRate}
                 />
+
               </Box>) : null}
             <FormControl component="fieldset" className={styles.select}>
               <FormLabel component="legend">{ring.productSelect}</FormLabel>
@@ -122,6 +122,7 @@ class Component extends React.Component {
               Amount:&nbsp;
               <InputMode value={amount} onChange={this.updateTextField} />
             </span>
+            <Typography component="p">Price: {ring.price}$</Typography>
             <Button
               className={styles.button}
               variant="contained"

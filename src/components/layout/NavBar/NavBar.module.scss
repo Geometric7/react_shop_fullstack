@@ -14,22 +14,50 @@
   text-decoration: none;
   color: $text-color-light;
   font-family: $text-font;
-  padding-left: 15px;
+  padding-right: 8em;
+  white-space: nowrap;
+
 }
 
 .brand {
   font-family: $header-font;
+  width: 5em;
+
 }
 
 .menuButton {
   margin-right: -7rem;
+
 }
+
+.link {
+  padding-left: 5px;
+}
+
 @media (max-width: 768px) {
   .brand {
     font-size: 15px;
+    //width: 5em;
   }
 
-  .login {
+  .link {
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    display: block;
+    padding: 0px;
     display: none;
+  }
+
+  .menuButton {
+  }
+
+}
+
+@media (max-width: 576px) {
+
+  .login {
+width: 5em;
+padding-left: 3em;
   }
 }

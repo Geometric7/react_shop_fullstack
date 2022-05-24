@@ -12,6 +12,8 @@
     //border-top-left-radius: 5%;
     margin-right: 2px;
     padding-right: 5px;
+    display: flex;
+    justify-content: flex-end;
   }
 
   .divider {
@@ -22,8 +24,9 @@
   }
 
   .TextBox {
+
     position: relative;
-    height: 610px;
+    height: 615px;
     border-radius: 5%;
     .image {
       position: absolute;
@@ -90,6 +93,15 @@
       .Subtext {
         font-size: 20px;
       }
+    }
+
+    .leftImage {
+      object-fit: cover;
+      overflow: hidden;
+      height: 400px;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
     }
   }
 }

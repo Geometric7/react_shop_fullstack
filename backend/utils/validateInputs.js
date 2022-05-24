@@ -1,7 +1,7 @@
 const validateInputs = client => {
   const { firstName, lastName, email, address, place, postCode } = client;
   const validEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-  const validAddress = /^([^\\u0000-\u007F]|\w)+,?\s\d+[A-z]?(\/\d+[A-z]?)?$/;
+  const validAddress = /ul\.([A-ZĘÓĄŚŁŻŹĆŃ]{1}[a-zęóąśłżźćń]+\s)/
   const invalidSigns = /[<>%\$]/;
   const validPostCode = /[0-9]{2}-[0-9]{3}/;
 
