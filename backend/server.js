@@ -38,9 +38,11 @@ app.use('*', (req, res) => {
 });
 
 /* MONGOOSE */
+
 process.env.NODE_ENV === 'production' ?
-mongoose.connect('mongodb+srv://', { useNewUrlParser: true, useUnifiedTopology: true }) :
-mongoose.connect('mongodb://localhost:27017/RingsShop', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb://localhost:27017/RingsShop', { useNewUrlParser: true, useUnifiedTopology: true }) :
+
+mongoose.connect('mongodb+srv://Geometric7:Enchanted2022@cluster0.zqjnl.mongodb.net/RingsShop?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 
 //app.use(session({
@@ -51,7 +53,8 @@ const db = mongoose.connection;
 db.once('open', () => {
   console.log('Successfully connected to the database');
 });
-db.on('error', err => console.log('Error: ' + err));
+db.on("error", (err) => console.log("Error: " + err
+));
 
 /* START SERVER */
 const port = process.env.PORT || 8000;
