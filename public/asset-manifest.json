@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ed6fec5e.css",
+    "main.js": "/static/js/main.7c069141.js",
+    "static/media/pop_rings_7.jpg": "/static/media/pop_rings_7.03bc8276e4e08c0fb1bf.jpg",
+    "static/media/pop_rings_8.jpg": "/static/media/pop_rings_8.7791cbaf9932d2236e20.jpg",
+    "index.html": "/index.html",
+    "main.ed6fec5e.css.map": "/static/css/main.ed6fec5e.css.map",
+    "main.7c069141.js.map": "/static/js/main.7c069141.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ed6fec5e.css",
+    "static/js/main.7c069141.js"
+  ]
+}
