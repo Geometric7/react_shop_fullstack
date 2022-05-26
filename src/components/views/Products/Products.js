@@ -59,7 +59,6 @@ class Component extends React.Component {
                 </CardContent>
               </Card>
             </NavLink>
-            <Divider variant="middle" className={styles.divider} />
           </div>
         ))}
       </Container>

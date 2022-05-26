@@ -89,15 +89,32 @@
      margin: 10px 0;
      justify-content: center;
      width: 85vw;
+     height: 80vh;
+
      .Content {
        width: 100%;
+       padding-bottom: 5px;
      }
      .BoardImg {
        width: 100%;
      }
-     h2 {
-       font-size: 24px;
+
+     .description {
+         text-overflow: ellipsis;
+         overflow: auto;
+         max-height: 48%;
+         font-size: 14px;
      }
+   }
+   h2 {
+     font-size: 40px;
+   }
+   .divider {
+     margin: 1.0rem;
+     background-color: $base-color;
+     border-radius: 50%;
+     margin-bottom: 30px;
+     height: 2px;
    }
  }
 }

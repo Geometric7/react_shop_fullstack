@@ -74,6 +74,28 @@ h2 {
   @media (max-width: 768px) {
     .textButton {
     font-size: 30px;
+    padding: 1rem;
+    position: absolute;
+    text-decoration: none;
+    color: $text-color-light;
+    font-family: $logo-font;
+    margin-top: 20px;
+    margin-right: 1px;
+    margin-bottom: 0px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+    }
+
+    .imageButton {
+      height: 100px;
+      width: 100%;
+      object-fit: cover;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .link {
+      padding: 1px;
+      margin: 5px;
     }
   }
 }

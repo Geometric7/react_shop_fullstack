@@ -8,8 +8,6 @@
     overflow: hidden;
     height: 615px;
     width: 100%;
-    //border-bottom-left-radius: 5%;
-    //border-top-left-radius: 5%;
     margin-right: 2px;
     padding-right: 5px;
     display: flex;
@@ -24,7 +22,6 @@
   }
 
   .TextBox {
-
     position: relative;
     height: 615px;
     border-radius: 5%;
@@ -39,7 +36,6 @@
       &:hover {
         opacity: 1;
         background-color: black;
-        //transition: all 0.6s ease-in-out;
       }
     }
     &:hover .Maintext {
@@ -83,12 +79,17 @@
     display: flex;
     justify-content: flex-end;
   }
+
   @media (max-width: 768px) {
     .TextBox {
-      height: 400px;
-
+      height: 300px;
+      .image {
+      height: 100%;
+      width: 98%;
+      }
       .Maintext {
         font-size: 30px;
+        margin-top: 35%;
       }
       .Subtext {
         font-size: 20px;
@@ -98,10 +99,20 @@
     .leftImage {
       object-fit: cover;
       overflow: hidden;
-      height: 400px;
+      height: 200px;
       width: 100%;
       display: flex;
       justify-content: flex-end;
+      padding-bottom: 2px;
+      padding-right: 7px;
     }
+
+    .divider {
+      margin: 1.5rem;
+      background-color: $base-color;
+      border-radius: 50%;
+      height: 2px;
+    }
+
   }
 }
