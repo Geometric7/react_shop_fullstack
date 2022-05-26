@@ -2,8 +2,8 @@
   "name": "react_shop_fullstack",
   "version": "0.1.0",
   "engines": {
-   "yarn": "1.22.17"
- },
+    "yarn": "1.22.17"
+  },
   "private": true,
   "dependencies": {
     "@brainhubeu/react-carousel": "1.19.26",
@@ -11,7 +11,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "5.14.0",
     "@fortawesome/react-fontawesome": "^0.1.18",
-    "@material-ui/core": "4.7.0",
+    "@material-ui/core": "4.12.4",
     "@material-ui/icons": "4.5.1",
     "@material-ui/lab": "4.0.0-alpha.56",
     "@testing-library/jest-dom": "^5.16.4",
