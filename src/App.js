@@ -1,5 +1,7 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, useLocation } from 'react-router-dom';
+import { useLayoutEffect } from 'react';
+
 import { Provider } from 'react-redux';
 
 import { createTheme, StylesProvider, ThemeProvider } from '@material-ui/core/styles';
@@ -20,24 +22,34 @@ const theme = createTheme({
   },
 });
 
+const Wrapper = ({children}) => {
+  const location = useLocation();
+  useLayoutEffect(() => {
+    document.documentElement.scrollTo(0, 0);
+  }, [location.pathname]);
+  return children;
+};
+
 const App = () => (
   <Provider store={store}>
     <BrowserRouter>
-      <StylesProvider injectFirst>
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
-          <MainLayout>
-            <Switch>
-              <Route exact path='/' component={ Homepage } />
-              <Route exact path='/products/:id' component={ Products } />
-              <Route exact path='/ring/:id' component={ Ring } />
-              <Route exact path='/order' component={ OrderSummary } />
-              <Route exact path='/creations' component={ Creations } />
-              <Route path='*' component={ NotFound } />
-            </Switch>
-          </MainLayout>
-        </ThemeProvider>
-      </StylesProvider>
+      <Wrapper>
+        <StylesProvider injectFirst>
+          <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <MainLayout>
+              <Switch>
+                <Route exact path='/' component={ Homepage } />
+                <Route exact path='/products/:id' component={ Products } />
+                <Route exact path='/ring/:id' component={ Ring } />
+                <Route exact path='/order' component={ OrderSummary } />
+                <Route exact path='/creations' component={ Creations } />
+                <Route path='*' component={ NotFound } />
+              </Switch>
+            </MainLayout>
+          </ThemeProvider>
+        </StylesProvider>
+      </Wrapper>
     </BrowserRouter>
   </Provider>
 );
