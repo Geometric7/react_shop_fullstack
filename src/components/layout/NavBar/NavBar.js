@@ -27,7 +27,9 @@ const Component = () => {
           color="inherit"
           aria-label="menu"
           href="/creations">
-          OUR CREATIONS
+          <Link to="/creations" className={styles.link}>
+          Our Creations
+          </Link>
         </Button>
         <Link to="/" className={styles.login}>
           <Typography align="center" variant="h4" className={styles.brand}>
