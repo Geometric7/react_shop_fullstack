@@ -1,13 +1,7 @@
 {
-  "name": "Enchanted Rings - Shop",
-  "short_name": "Enchanted Rings",
-  "theme_color": "#856C8B",
-  "background_color": "#F2EAE6",
-  "display": "standalone",
-  "orientation": "portrait",
-  "scope": "/",
-  "start_url": "/",
-  "icons": [
+    "name": "",
+    "short_name": "",
+    "icons": [
         {
             "src": "/public/images/icons/android-chrome-192x192.png",
             "sizes": "192x192",
@@ -18,5 +12,8 @@
             "sizes": "512x512",
             "type": "image/png"
         }
-    ]
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone"
 }
