@@ -1,1 +1,70 @@
 @import '../../../styles/settings.scss';
+
+.root {
+    font-family: $text-font;
+    font-size: 64px;
+    text-align: center;
+}
+
+h1 {
+  margin-bottom: 1px;
+}
+
+.button {
+    background-color: #856C8B;
+    width: 280px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    text-decoration: none;
+    &:hover {
+      border-color: black;
+      background-color: transparentize($color: $palette-color, $amount: 0.1);
+    }
+
+    a {
+      font-size: 18px;
+      text-decoration: none;
+      color: black;
+      font-family: $text-font;
+      font-weight: 400;
+      padding: 20px;
+      display: block;
+      color: $text-color-light;
+    }
+}
+
+
+@media (max-width: 768px) {
+  .root {
+      font-size: 25px;
+      text-align: center;
+      margin-top: 85px;
+      margin-bottom: 50px;
+  }
+
+  .button {
+      background-color: #856C8B;
+      width: 190px;
+      border-radius: 5px;
+      cursor: pointer;
+      &:focus {
+        background-color: lighten($base-color, 75%);
+      }
+
+      a {
+        font-size: 14px;
+        font-family: $text-font;
+
+      }
+    }
+
+    img {
+      padding-bottom: 0px;
+    }
+
+
+}

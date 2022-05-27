@@ -42,3 +42,23 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+
+  .root{
+    .button {
+      letter-spacing: 0.1rem;
+      //margin-top:1rem;
+      margin-bottom: 1rem;
+      float: right;
+      width: 50%;
+      background-color: $base-color;
+      height: 50px;
+      color: $text-color-light;
+      letter-spacing: 0.1rem;
+      &:hover {
+          background-color: lighten($color: $base-color, $amount: 5%);
+        }
+    }
+  }
+}

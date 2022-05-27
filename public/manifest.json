@@ -2,9 +2,9 @@
   "name": "Enchanted Rings - Shop",
   "short_name": "Enchanted Rings",
   "theme_color": "#856C8B",
-  "background_color": "#F2EAE6",
-  "display": "standalone",
+  "background_color": "#FFFFFF",
   "orientation": "portrait",
+  "display": "standalone",
   "scope": "/",
   "start_url": "/",
   "icons": [
