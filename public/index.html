@@ -42,6 +42,14 @@
     <link rel="apple-touch-startup-image" media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="images/splashscreens/4__iPhone_SE__iPod_touch_5th_generation_and_later_portrait.png">
     <title>Enchanted Rings</title>
   </head>
+  <script>
+    if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/serviceWorker.js')
+            .then(function () {
+                console.log('Service Worker Registered');
+            });
+    }
+  </script>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
