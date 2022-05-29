@@ -1,3 +1,13 @@
+![GitHub repo size](https://img.shields.io/github/repo-size/Geometric7/react_shop_fullstack?style=plastic) ![GitHub language count](https://img.shields.io/github/languages/count/Geometric7/react_shop_fullstack?style=plastic) ![GitHub top language](https://img.shields.io/github/languages/top/Geometric7/react_shop_fullstack?style=plastic) ![GitHub last commit](https://img.shields.io/github/last-commit/Geometric7/react_shop_fullstack?color=red&style=plastic)
+# Just click on **[link](https://enchanted-shop.herokuapp.com/)** to access the webpage.
+
+**Start the project locally:**
+`yarn install && yarn start`
+
+**The most up-to-date commit:**
+https://github.com/Geometric7/react_shop_fullstack/commit/199122a9d756f21b758bca2b7956f27b998a5f3f
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
